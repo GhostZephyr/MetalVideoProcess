@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A16187324B74DCC00ECDEF4 /* ViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A16187224B74DCC00ECDEF4 /* ViewController+UITableViewDelegate.swift */; };
+		6A16187624B74DEE00ECDEF4 /* ViewController+UIImagePickerControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A16187524B74DEE00ECDEF4 /* ViewController+UIImagePickerControllerDelegate.swift */; };
+		6A16187824B74E4400ECDEF4 /* ViewController+MetalVideoProcessPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A16187724B74E4400ECDEF4 /* ViewController+MetalVideoProcessPlayerDelegate.swift */; };
+		6A16187B24B74F0500ECDEF4 /* ViewController+UIGestureRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A16187A24B74F0500ECDEF4 /* ViewController+UIGestureRecognizerDelegate.swift */; };
+		6AD698A124B47A2700A9CF8F /* TableViewDraggerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD6989C24B47A2700A9CF8F /* TableViewDraggerCell.swift */; };
+		6AD698A224B47A2700A9CF8F /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD6989D24B47A2700A9CF8F /* UIScrollViewExtension.swift */; };
+		6AD698A324B47A2700A9CF8F /* TableViewDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD6989E24B47A2700A9CF8F /* TableViewDragger.swift */; };
+		6AD698A424B47A2700A9CF8F /* ScrollRects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD698A024B47A2700A9CF8F /* ScrollRects.swift */; };
+		6AD698AF24B47A6A00A9CF8F /* MetalVideoProcess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD698AB24B47A4A00A9CF8F /* MetalVideoProcess.framework */; };
+		6AD698B024B47A6A00A9CF8F /* MetalVideoProcess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD698AB24B47A4A00A9CF8F /* MetalVideoProcess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6AD698BA24B47D7000A9CF8F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD698B424B47D7000A9CF8F /* MBProgressHUD.m */; };
+		6AD698BB24B47D7000A9CF8F /* MBProgressHUDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD698B724B47D7000A9CF8F /* MBProgressHUDExtension.swift */; };
+		6AD698BC24B47D7000A9CF8F /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6AD698B824B47D7000A9CF8F /* ProgressHUD.bundle */; };
+		6AD698BD24B47D7000A9CF8F /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD698B924B47D7000A9CF8F /* ProgressHUD.m */; };
+		6AD698C124B47DB200A9CF8F /* cute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6AD698BF24B47DB200A9CF8F /* cute.mp4 */; };
+		6AD698C224B47DB200A9CF8F /* movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = 6AD698C024B47DB200A9CF8F /* movie.mov */; };
+		6AD698C524B4837E00A9CF8F /* ResourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD698C424B4837E00A9CF8F /* ResourceItem.swift */; };
+		6AD698C724B490A500A9CF8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD698C624B490A500A9CF8F /* Images.xcassets */; };
+		6ADB07C224ADE0730010A817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB07C124ADE0730010A817 /* AppDelegate.swift */; };
+		6ADB07C424ADE0730010A817 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB07C324ADE0730010A817 /* SceneDelegate.swift */; };
+		6ADB07C624ADE0730010A817 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB07C524ADE0730010A817 /* ViewController.swift */; };
+		6ADB07C924ADE0730010A817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ADB07C724ADE0730010A817 /* Main.storyboard */; };
+		6ADB07CB24ADE0740010A817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ADB07CA24ADE0740010A817 /* Assets.xcassets */; };
+		6ADB07CE24ADE0740010A817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ADB07CC24ADE0740010A817 /* LaunchScreen.storyboard */; };
+		6AF122E224B5751500091B60 /* PopupDialog+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122D224B5751400091B60 /* PopupDialog+Keyboard.swift */; };
+		6AF122E324B5751500091B60 /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122D324B5751400091B60 /* InteractiveTransition.swift */; };
+		6AF122E424B5751500091B60 /* UIImageView+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122D424B5751400091B60 /* UIImageView+Calculations.swift */; };
+		6AF122E524B5751500091B60 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122D524B5751400091B60 /* UIView+Animations.swift */; };
+		6AF122E624B5751500091B60 /* PopupDialogDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122D624B5751400091B60 /* PopupDialogDefaultViewController.swift */; };
+		6AF122E724B5751500091B60 /* PopupDialogDefaultButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122D724B5751400091B60 /* PopupDialogDefaultButtons.swift */; };
+		6AF122E824B5751500091B60 /* TransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122D824B5751400091B60 /* TransitionAnimations.swift */; };
+		6AF122E924B5751500091B60 /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122D924B5751400091B60 /* PresentationManager.swift */; };
+		6AF122EA24B5751500091B60 /* UIViewController+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122DA24B5751400091B60 /* UIViewController+Visibility.swift */; };
+		6AF122EB24B5751500091B60 /* PopupDialogContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122DB24B5751400091B60 /* PopupDialogContainerView.swift */; };
+		6AF122EC24B5751500091B60 /* PopupDialogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122DC24B5751400091B60 /* PopupDialogButton.swift */; };
+		6AF122ED24B5751500091B60 /* PopupDialogOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122DD24B5751500091B60 /* PopupDialogOverlayView.swift */; };
+		6AF122EE24B5751500091B60 /* PopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122DE24B5751500091B60 /* PopupDialog.swift */; };
+		6AF122EF24B5751500091B60 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122DF24B5751500091B60 /* PresentationController.swift */; };
+		6AF122F024B5751500091B60 /* PopupDialogDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122E024B5751500091B60 /* PopupDialogDefaultView.swift */; };
+		6AF122F124B5751500091B60 /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122E124B5751500091B60 /* TransitionAnimator.swift */; };
+		6AF122FB24B5753A00091B60 /* DynamicBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122F424B5753A00091B60 /* DynamicBlurView.swift */; };
+		6AF122FC24B5753A00091B60 /* TrackingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122F524B5753A00091B60 /* TrackingMode.swift */; };
+		6AF122FD24B5753A00091B60 /* CGImage+Accelerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122F624B5753A00091B60 /* CGImage+Accelerate.swift */; };
+		6AF122FE24B5753A00091B60 /* UIImage+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122F724B5753A00091B60 /* UIImage+Blur.swift */; };
+		6AF122FF24B5753A00091B60 /* CGContext+CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122F824B5753A00091B60 /* CGContext+CGImage.swift */; };
+		6AF1230024B5753A00091B60 /* CaptureQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122F924B5753A00091B60 /* CaptureQuality.swift */; };
+		6AF1230124B5753A00091B60 /* BlurLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF122FA24B5753A00091B60 /* BlurLayer.swift */; };
+		6AF1230524B59EB600091B60 /* ResourceItemEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AF1230424B59EB600091B60 /* ResourceItemEditView.xib */; };
+		6AF1230824B5A0C200091B60 /* ResourceItemEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF1230624B5A0C200091B60 /* ResourceItemEditView.swift */; };
+		6AF1230B24B5AA5000091B60 /* ResourceItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF1230A24B5AA5000091B60 /* ResourceItemTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6AD698AA24B47A4A00A9CF8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AD698A624B47A4A00A9CF8F /* MetalVideoProcess.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6ADB062424AD885F0010A817;
+			remoteInfo = MetalVideoProcess;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6AD698B124B47A6A00A9CF8F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6AD698B024B47A6A00A9CF8F /* MetalVideoProcess.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6A16187224B74DCC00ECDEF4 /* ViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		6A16187524B74DEE00ECDEF4 /* ViewController+UIImagePickerControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UIImagePickerControllerDelegate.swift"; sourceTree = "<group>"; };
+		6A16187724B74E4400ECDEF4 /* ViewController+MetalVideoProcessPlayerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+MetalVideoProcessPlayerDelegate.swift"; sourceTree = "<group>"; };
+		6A16187A24B74F0500ECDEF4 /* ViewController+UIGestureRecognizerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UIGestureRecognizerDelegate.swift"; sourceTree = "<group>"; };
+		6AD6989C24B47A2700A9CF8F /* TableViewDraggerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDraggerCell.swift; sourceTree = "<group>"; };
+		6AD6989D24B47A2700A9CF8F /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		6AD6989E24B47A2700A9CF8F /* TableViewDragger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDragger.swift; sourceTree = "<group>"; };
+		6AD698A024B47A2700A9CF8F /* ScrollRects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollRects.swift; sourceTree = "<group>"; };
+		6AD698A624B47A4A00A9CF8F /* MetalVideoProcess.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MetalVideoProcess.xcodeproj; path = ../../MetalVideoProcess.xcodeproj; sourceTree = "<group>"; };
+		6AD698B424B47D7000A9CF8F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		6AD698B524B47D7000A9CF8F /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		6AD698B624B47D7000A9CF8F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		6AD698B724B47D7000A9CF8F /* MBProgressHUDExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBProgressHUDExtension.swift; sourceTree = "<group>"; };
+		6AD698B824B47D7000A9CF8F /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		6AD698B924B47D7000A9CF8F /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		6AD698BE24B47D8500A9CF8F /* SimpleVideoEditor-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SimpleVideoEditor-Bridging-Header.h"; sourceTree = "<group>"; };
+		6AD698BF24B47DB200A9CF8F /* cute.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cute.mp4; sourceTree = "<group>"; };
+		6AD698C024B47DB200A9CF8F /* movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = movie.mov; sourceTree = "<group>"; };
+		6AD698C424B4837E00A9CF8F /* ResourceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceItem.swift; sourceTree = "<group>"; };
+		6AD698C624B490A500A9CF8F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6ADB07BE24ADE0730010A817 /* SimpleVideoEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleVideoEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ADB07C124ADE0730010A817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6ADB07C324ADE0730010A817 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6ADB07C524ADE0730010A817 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6ADB07C824ADE0730010A817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6ADB07CA24ADE0740010A817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6ADB07CD24ADE0740010A817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6ADB07CF24ADE0740010A817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AF122D224B5751400091B60 /* PopupDialog+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PopupDialog+Keyboard.swift"; sourceTree = "<group>"; };
+		6AF122D324B5751400091B60 /* InteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveTransition.swift; sourceTree = "<group>"; };
+		6AF122D424B5751400091B60 /* UIImageView+Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Calculations.swift"; sourceTree = "<group>"; };
+		6AF122D524B5751400091B60 /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		6AF122D624B5751400091B60 /* PopupDialogDefaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultViewController.swift; sourceTree = "<group>"; };
+		6AF122D724B5751400091B60 /* PopupDialogDefaultButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultButtons.swift; sourceTree = "<group>"; };
+		6AF122D824B5751400091B60 /* TransitionAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimations.swift; sourceTree = "<group>"; };
+		6AF122D924B5751400091B60 /* PresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationManager.swift; sourceTree = "<group>"; };
+		6AF122DA24B5751400091B60 /* UIViewController+Visibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Visibility.swift"; sourceTree = "<group>"; };
+		6AF122DB24B5751400091B60 /* PopupDialogContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogContainerView.swift; sourceTree = "<group>"; };
+		6AF122DC24B5751400091B60 /* PopupDialogButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogButton.swift; sourceTree = "<group>"; };
+		6AF122DD24B5751500091B60 /* PopupDialogOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogOverlayView.swift; sourceTree = "<group>"; };
+		6AF122DE24B5751500091B60 /* PopupDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialog.swift; sourceTree = "<group>"; };
+		6AF122DF24B5751500091B60 /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		6AF122E024B5751500091B60 /* PopupDialogDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultView.swift; sourceTree = "<group>"; };
+		6AF122E124B5751500091B60 /* TransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimator.swift; sourceTree = "<group>"; };
+		6AF122F324B5753A00091B60 /* DynamicBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicBlurView.h; sourceTree = "<group>"; };
+		6AF122F424B5753A00091B60 /* DynamicBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicBlurView.swift; sourceTree = "<group>"; };
+		6AF122F524B5753A00091B60 /* TrackingMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingMode.swift; sourceTree = "<group>"; };
+		6AF122F624B5753A00091B60 /* CGImage+Accelerate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+Accelerate.swift"; sourceTree = "<group>"; };
+		6AF122F724B5753A00091B60 /* UIImage+Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Blur.swift"; sourceTree = "<group>"; };
+		6AF122F824B5753A00091B60 /* CGContext+CGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+CGImage.swift"; sourceTree = "<group>"; };
+		6AF122F924B5753A00091B60 /* CaptureQuality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureQuality.swift; sourceTree = "<group>"; };
+		6AF122FA24B5753A00091B60 /* BlurLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurLayer.swift; sourceTree = "<group>"; };
+		6AF1230424B59EB600091B60 /* ResourceItemEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResourceItemEditView.xib; sourceTree = "<group>"; };
+		6AF1230624B5A0C200091B60 /* ResourceItemEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceItemEditView.swift; sourceTree = "<group>"; };
+		6AF1230A24B5AA5000091B60 /* ResourceItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceItemTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6ADB07BB24ADE0730010A817 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD698AF24B47A6A00A9CF8F /* MetalVideoProcess.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AD6989A24B47A1600A9CF8F /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				6AF122F224B5752E00091B60 /* DynamicBlurView */,
+				6AF122D124B5750B00091B60 /* PopupDialog */,
+				6AD698B324B47D7000A9CF8F /* UI */,
+				6AD6989B24B47A2000A9CF8F /* TableViewDragger */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		6AD6989B24B47A2000A9CF8F /* TableViewDragger */ = {
+			isa = PBXGroup;
+			children = (
+				6AD698A024B47A2700A9CF8F /* ScrollRects.swift */,
+				6AD6989E24B47A2700A9CF8F /* TableViewDragger.swift */,
+				6AD6989C24B47A2700A9CF8F /* TableViewDraggerCell.swift */,
+				6AD6989D24B47A2700A9CF8F /* UIScrollViewExtension.swift */,
+			);
+			path = TableViewDragger;
+			sourceTree = "<group>";
+		};
+		6AD698A724B47A4A00A9CF8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AD698AB24B47A4A00A9CF8F /* MetalVideoProcess.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AD698AD24B47A6A00A9CF8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6AD698B324B47D7000A9CF8F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6AD698B424B47D7000A9CF8F /* MBProgressHUD.m */,
+				6AD698B524B47D7000A9CF8F /* ProgressHUD.h */,
+				6AD698B624B47D7000A9CF8F /* MBProgressHUD.h */,
+				6AD698B724B47D7000A9CF8F /* MBProgressHUDExtension.swift */,
+				6AD698B824B47D7000A9CF8F /* ProgressHUD.bundle */,
+				6AD698B924B47D7000A9CF8F /* ProgressHUD.m */,
+			);
+			name = UI;
+			path = ../../../SimpleVideoExport/SimpleVideoExport/UI;
+			sourceTree = "<group>";
+		};
+		6AD698C324B4834800A9CF8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6AD698C424B4837E00A9CF8F /* ResourceItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6ADB07B524ADE0730010A817 = {
+			isa = PBXGroup;
+			children = (
+				6AD698A624B47A4A00A9CF8F /* MetalVideoProcess.xcodeproj */,
+				6ADB07C024ADE0730010A817 /* SimpleVideoEditor */,
+				6ADB07BF24ADE0730010A817 /* Products */,
+				6AD698AD24B47A6A00A9CF8F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6ADB07BF24ADE0730010A817 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB07BE24ADE0730010A817 /* SimpleVideoEditor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6ADB07C024ADE0730010A817 /* SimpleVideoEditor */ = {
+			isa = PBXGroup;
+			children = (
+				6AD698C324B4834800A9CF8F /* Model */,
+				6AD6989A24B47A1600A9CF8F /* Vender */,
+				6ADB07C124ADE0730010A817 /* AppDelegate.swift */,
+				6ADB07C324ADE0730010A817 /* SceneDelegate.swift */,
+				6ADB07C524ADE0730010A817 /* ViewController.swift */,
+				6AD698BF24B47DB200A9CF8F /* cute.mp4 */,
+				6AD698C024B47DB200A9CF8F /* movie.mov */,
+				6ADB07C724ADE0730010A817 /* Main.storyboard */,
+				6AD698C624B490A500A9CF8F /* Images.xcassets */,
+				6ADB07CA24ADE0740010A817 /* Assets.xcassets */,
+				6ADB07CC24ADE0740010A817 /* LaunchScreen.storyboard */,
+				6ADB07CF24ADE0740010A817 /* Info.plist */,
+				6AD698BE24B47D8500A9CF8F /* SimpleVideoEditor-Bridging-Header.h */,
+				6AF1230424B59EB600091B60 /* ResourceItemEditView.xib */,
+				6AF1230624B5A0C200091B60 /* ResourceItemEditView.swift */,
+				6AF1230A24B5AA5000091B60 /* ResourceItemTableViewCell.swift */,
+				6A16187224B74DCC00ECDEF4 /* ViewController+UITableViewDelegate.swift */,
+				6A16187524B74DEE00ECDEF4 /* ViewController+UIImagePickerControllerDelegate.swift */,
+				6A16187724B74E4400ECDEF4 /* ViewController+MetalVideoProcessPlayerDelegate.swift */,
+				6A16187A24B74F0500ECDEF4 /* ViewController+UIGestureRecognizerDelegate.swift */,
+			);
+			path = SimpleVideoEditor;
+			sourceTree = "<group>";
+		};
+		6AF122D124B5750B00091B60 /* PopupDialog */ = {
+			isa = PBXGroup;
+			children = (
+				6AF122D324B5751400091B60 /* InteractiveTransition.swift */,
+				6AF122DE24B5751500091B60 /* PopupDialog.swift */,
+				6AF122D224B5751400091B60 /* PopupDialog+Keyboard.swift */,
+				6AF122DC24B5751400091B60 /* PopupDialogButton.swift */,
+				6AF122DB24B5751400091B60 /* PopupDialogContainerView.swift */,
+				6AF122D724B5751400091B60 /* PopupDialogDefaultButtons.swift */,
+				6AF122E024B5751500091B60 /* PopupDialogDefaultView.swift */,
+				6AF122D624B5751400091B60 /* PopupDialogDefaultViewController.swift */,
+				6AF122DD24B5751500091B60 /* PopupDialogOverlayView.swift */,
+				6AF122DF24B5751500091B60 /* PresentationController.swift */,
+				6AF122D924B5751400091B60 /* PresentationManager.swift */,
+				6AF122D824B5751400091B60 /* TransitionAnimations.swift */,
+				6AF122E124B5751500091B60 /* TransitionAnimator.swift */,
+				6AF122D424B5751400091B60 /* UIImageView+Calculations.swift */,
+				6AF122D524B5751400091B60 /* UIView+Animations.swift */,
+				6AF122DA24B5751400091B60 /* UIViewController+Visibility.swift */,
+			);
+			path = PopupDialog;
+			sourceTree = "<group>";
+		};
+		6AF122F224B5752E00091B60 /* DynamicBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				6AF122FA24B5753A00091B60 /* BlurLayer.swift */,
+				6AF122F924B5753A00091B60 /* CaptureQuality.swift */,
+				6AF122F824B5753A00091B60 /* CGContext+CGImage.swift */,
+				6AF122F624B5753A00091B60 /* CGImage+Accelerate.swift */,
+				6AF122F324B5753A00091B60 /* DynamicBlurView.h */,
+				6AF122F424B5753A00091B60 /* DynamicBlurView.swift */,
+				6AF122F524B5753A00091B60 /* TrackingMode.swift */,
+				6AF122F724B5753A00091B60 /* UIImage+Blur.swift */,
+			);
+			path = DynamicBlurView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6ADB07BD24ADE0730010A817 /* SimpleVideoEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6ADB07D224ADE0740010A817 /* Build configuration list for PBXNativeTarget "SimpleVideoEditor" */;
+			buildPhases = (
+				6ADB07BA24ADE0730010A817 /* Sources */,
+				6ADB07BB24ADE0730010A817 /* Frameworks */,
+				6ADB07BC24ADE0730010A817 /* Resources */,
+				6AD698B124B47A6A00A9CF8F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleVideoEditor;
+			productName = SimpleVideoEditor;
+			productReference = 6ADB07BE24ADE0730010A817 /* SimpleVideoEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6ADB07B624ADE0730010A817 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "RenZhu Macro";
+				TargetAttributes = {
+					6ADB07BD24ADE0730010A817 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 6ADB07B924ADE0730010A817 /* Build configuration list for PBXProject "SimpleVideoEditor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6ADB07B524ADE0730010A817;
+			productRefGroup = 6ADB07BF24ADE0730010A817 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6AD698A724B47A4A00A9CF8F /* Products */;
+					ProjectRef = 6AD698A624B47A4A00A9CF8F /* MetalVideoProcess.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				6ADB07BD24ADE0730010A817 /* SimpleVideoEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6AD698AB24B47A4A00A9CF8F /* MetalVideoProcess.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MetalVideoProcess.framework;
+			remoteRef = 6AD698AA24B47A4A00A9CF8F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6ADB07BC24ADE0730010A817 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD698BC24B47D7000A9CF8F /* ProgressHUD.bundle in Resources */,
+				6AF1230524B59EB600091B60 /* ResourceItemEditView.xib in Resources */,
+				6ADB07CE24ADE0740010A817 /* LaunchScreen.storyboard in Resources */,
+				6AD698C724B490A500A9CF8F /* Images.xcassets in Resources */,
+				6ADB07CB24ADE0740010A817 /* Assets.xcassets in Resources */,
+				6AD698C124B47DB200A9CF8F /* cute.mp4 in Resources */,
+				6ADB07C924ADE0730010A817 /* Main.storyboard in Resources */,
+				6AD698C224B47DB200A9CF8F /* movie.mov in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6ADB07BA24ADE0730010A817 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AF1230B24B5AA5000091B60 /* ResourceItemTableViewCell.swift in Sources */,
+				6AF122FD24B5753A00091B60 /* CGImage+Accelerate.swift in Sources */,
+				6AD698C524B4837E00A9CF8F /* ResourceItem.swift in Sources */,
+				6AF122E824B5751500091B60 /* TransitionAnimations.swift in Sources */,
+				6AF122F124B5751500091B60 /* TransitionAnimator.swift in Sources */,
+				6A16187B24B74F0500ECDEF4 /* ViewController+UIGestureRecognizerDelegate.swift in Sources */,
+				6AF122FE24B5753A00091B60 /* UIImage+Blur.swift in Sources */,
+				6AF122E924B5751500091B60 /* PresentationManager.swift in Sources */,
+				6AD698A424B47A2700A9CF8F /* ScrollRects.swift in Sources */,
+				6AF122EA24B5751500091B60 /* UIViewController+Visibility.swift in Sources */,
+				6AF122E524B5751500091B60 /* UIView+Animations.swift in Sources */,
+				6AF1230824B5A0C200091B60 /* ResourceItemEditView.swift in Sources */,
+				6AF122E424B5751500091B60 /* UIImageView+Calculations.swift in Sources */,
+				6A16187824B74E4400ECDEF4 /* ViewController+MetalVideoProcessPlayerDelegate.swift in Sources */,
+				6A16187324B74DCC00ECDEF4 /* ViewController+UITableViewDelegate.swift in Sources */,
+				6AD698A224B47A2700A9CF8F /* UIScrollViewExtension.swift in Sources */,
+				6AD698BD24B47D7000A9CF8F /* ProgressHUD.m in Sources */,
+				6A16187624B74DEE00ECDEF4 /* ViewController+UIImagePickerControllerDelegate.swift in Sources */,
+				6AF122EF24B5751500091B60 /* PresentationController.swift in Sources */,
+				6AD698BB24B47D7000A9CF8F /* MBProgressHUDExtension.swift in Sources */,
+				6AD698A124B47A2700A9CF8F /* TableViewDraggerCell.swift in Sources */,
+				6AF122EB24B5751500091B60 /* PopupDialogContainerView.swift in Sources */,
+				6AF1230124B5753A00091B60 /* BlurLayer.swift in Sources */,
+				6AF122F024B5751500091B60 /* PopupDialogDefaultView.swift in Sources */,
+				6AD698A324B47A2700A9CF8F /* TableViewDragger.swift in Sources */,
+				6AF122E624B5751500091B60 /* PopupDialogDefaultViewController.swift in Sources */,
+				6AF122FB24B5753A00091B60 /* DynamicBlurView.swift in Sources */,
+				6AF122EC24B5751500091B60 /* PopupDialogButton.swift in Sources */,
+				6ADB07C624ADE0730010A817 /* ViewController.swift in Sources */,
+				6AF122EE24B5751500091B60 /* PopupDialog.swift in Sources */,
+				6AF122E724B5751500091B60 /* PopupDialogDefaultButtons.swift in Sources */,
+				6ADB07C224ADE0730010A817 /* AppDelegate.swift in Sources */,
+				6AF122FF24B5753A00091B60 /* CGContext+CGImage.swift in Sources */,
+				6AF122E224B5751500091B60 /* PopupDialog+Keyboard.swift in Sources */,
+				6ADB07C424ADE0730010A817 /* SceneDelegate.swift in Sources */,
+				6AD698BA24B47D7000A9CF8F /* MBProgressHUD.m in Sources */,
+				6AF1230024B5753A00091B60 /* CaptureQuality.swift in Sources */,
+				6AF122E324B5751500091B60 /* InteractiveTransition.swift in Sources */,
+				6AF122FC24B5753A00091B60 /* TrackingMode.swift in Sources */,
+				6AF122ED24B5751500091B60 /* PopupDialogOverlayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6ADB07C724ADE0730010A817 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6ADB07C824ADE0730010A817 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6ADB07CC24ADE0740010A817 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6ADB07CD24ADE0740010A817 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6ADB07D024ADE0740010A817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6ADB07D124ADE0740010A817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6ADB07D324ADE0740010A817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RYRPKMVKDL;
+				INFOPLIST_FILE = SimpleVideoEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangrenzhu.SimpleVideoEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleVideoEditor/SimpleVideoEditor-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6ADB07D424ADE0740010A817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RYRPKMVKDL;
+				INFOPLIST_FILE = SimpleVideoEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangrenzhu.SimpleVideoEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleVideoEditor/SimpleVideoEditor-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6ADB07B924ADE0730010A817 /* Build configuration list for PBXProject "SimpleVideoEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ADB07D024ADE0740010A817 /* Debug */,
+				6ADB07D124ADE0740010A817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6ADB07D224ADE0740010A817 /* Build configuration list for PBXNativeTarget "SimpleVideoEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ADB07D324ADE0740010A817 /* Debug */,
+				6ADB07D424ADE0740010A817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6ADB07B624ADE0730010A817 /* Project object */;
+}

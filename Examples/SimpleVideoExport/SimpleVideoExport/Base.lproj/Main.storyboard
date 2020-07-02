@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleVideoExport" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc5-Dz-opT" customClass="MetalVideoProcessRenderView" customModule="MetalVideoProcess">
+                                <rect key="frame" x="0.0" y="44" width="414" height="414"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Dc5-Dz-opT" secondAttribute="height" id="86r-Og-HwX"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vYk-6H-dKP">
+                                <rect key="frame" x="8" y="478" width="398" height="31"/>
+                                <connections>
+                                    <action selector="progressChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fwh-uk-uYl"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6w-Ud-xUK">
+                                <rect key="frame" x="192" y="528" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZ4-2E-l3J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMy-fV-lJB">
+                                <rect key="frame" x="186" y="578" width="42" height="30"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WbY-hn-U3f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhW-Ru-ll4">
+                                <rect key="frame" x="184.5" y="628" width="45" height="30"/>
+                                <state key="normal" title="Export"/>
+                                <connections>
+                                    <action selector="export:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zt3-7T-PpN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WhW-Ru-ll4" firstAttribute="top" secondItem="gMy-fV-lJB" secondAttribute="bottom" constant="20" id="3My-Xx-EQU"/>
+                            <constraint firstItem="Dc5-Dz-opT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7MR-S1-7Xq"/>
+                            <constraint firstItem="vYk-6H-dKP" firstAttribute="top" secondItem="Dc5-Dz-opT" secondAttribute="bottom" constant="20" id="9FO-ag-qBs"/>
+                            <constraint firstItem="Dc5-Dz-opT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BlF-9Y-vIn"/>
+                            <constraint firstItem="WhW-Ru-ll4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ci7-MA-zbE"/>
+                            <constraint firstItem="gMy-fV-lJB" firstAttribute="top" secondItem="K6w-Ud-xUK" secondAttribute="bottom" constant="20" id="Gi5-pV-rO9"/>
+                            <constraint firstItem="gMy-fV-lJB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gqx-bc-4zc"/>
+                            <constraint firstItem="K6w-Ud-xUK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LaJ-so-qEc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dc5-Dz-opT" secondAttribute="trailing" id="Rt7-yT-k9J"/>
+                            <constraint firstItem="vYk-6H-dKP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="UKf-H0-pvm"/>
+                            <constraint firstItem="K6w-Ud-xUK" firstAttribute="top" secondItem="vYk-6H-dKP" secondAttribute="bottom" constant="20" id="aYl-Sa-qn2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vYk-6H-dKP" secondAttribute="trailing" constant="10" id="itv-bP-sNm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="progress" destination="vYk-6H-dKP" id="gO1-dC-7Mr"/>
+                        <outlet property="renderView" destination="Dc5-Dz-opT" id="pAr-Jw-HTI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="138"/>
+        </scene>
+    </scenes>
+</document>

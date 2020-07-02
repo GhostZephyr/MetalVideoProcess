@@ -1,0 +1,800 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A3E705924BD9099009A0AC9 /* MetalVideoProcessTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3E705824BD9099009A0AC9 /* MetalVideoProcessTransition.swift */; };
+		6A3E708824C0448B009A0AC9 /* MetalVideoProcessFadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3E708724C0448B009A0AC9 /* MetalVideoProcessFadeTransition.swift */; };
+		6A3E708A24C044A0009A0AC9 /* MetalVideoProcessFadeTransition.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6A3E708924C044A0009A0AC9 /* MetalVideoProcessFadeTransition.metal */; };
+		6AA561D324BC57F3004894F7 /* MetalVideoProcessLuminance.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6AA561D124BC57F3004894F7 /* MetalVideoProcessLuminance.metal */; };
+		6AA561D424BC57F3004894F7 /* MetalVideoProcessLuminance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA561D224BC57F3004894F7 /* MetalVideoProcessLuminance.swift */; };
+		6ADB062924AD885F0010A817 /* MetalVideoProcess.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ADB062724AD885F0010A817 /* MetalVideoProcess.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6ADB065824AD8B7E0010A817 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB063A24AD8B7D0010A817 /* Color.swift */; };
+		6ADB065A24AD8B7E0010A817 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB063C24AD8B7D0010A817 /* Matrix.swift */; };
+		6ADB065D24AD8B7E0010A817 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB063F24AD8B7E0010A817 /* Size.swift */; };
+		6ADB065E24AD8B7E0010A817 /* MetalRendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB064024AD8B7E0010A817 /* MetalRendering.swift */; };
+		6ADB066024AD8B7E0010A817 /* Pipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB064224AD8B7E0010A817 /* Pipeline.swift */; };
+		6ADB066124AD8B7E0010A817 /* Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB064324AD8B7E0010A817 /* Timestamp.swift */; };
+		6ADB066924AD8B7E0010A817 /* ShaderUniformSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB064B24AD8B7E0010A817 /* ShaderUniformSettings.swift */; };
+		6ADB066B24AD8B7E0010A817 /* MetalRenderingDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB064D24AD8B7E0010A817 /* MetalRenderingDevice.swift */; };
+		6ADB066C24AD8B7E0010A817 /* ImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB064E24AD8B7E0010A817 /* ImageOrientation.swift */; };
+		6ADB067024AD8B7E0010A817 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB065224AD8B7E0010A817 /* Position.swift */; };
+		6ADB067124AD8B7E0010A817 /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB065324AD8B7E0010A817 /* Texture.swift */; };
+		6ADB069A24ADB3B70010A817 /* VideoCompositionInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB067424ADB3B70010A817 /* VideoCompositionInstruction.swift */; };
+		6ADB069B24ADB3B70010A817 /* VideoCompositor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB067524ADB3B70010A817 /* VideoCompositor.swift */; };
+		6ADB069C24ADB3B70010A817 /* CompositionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB067624ADB3B70010A817 /* CompositionGenerator.swift */; };
+		6ADB069D24ADB3B70010A817 /* AudioProcessingTapHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB067824ADB3B70010A817 /* AudioProcessingTapHolder.swift */; };
+		6ADB069E24ADB3B70010A817 /* AudioMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB067924ADB3B70010A817 /* AudioMixer.swift */; };
+		6ADB069F24ADB3B70010A817 /* AudioProcessingChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB067A24ADB3B70010A817 /* AudioProcessingChain.swift */; };
+		6ADB06A024ADB3B70010A817 /* VideoTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB067C24ADB3B70010A817 /* VideoTransition.swift */; };
+		6ADB06A124ADB3B70010A817 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB067D24ADB3B70010A817 /* Timeline.swift */; };
+		6ADB06A224ADB3B70010A817 /* CompositionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB067E24ADB3B70010A817 /* CompositionProvider.swift */; };
+		6ADB06A324ADB3B70010A817 /* AudioTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB067F24ADB3B70010A817 /* AudioTransition.swift */; };
+		6ADB06A424ADB3B70010A817 /* ImageOverlayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB068124ADB3B70010A817 /* ImageOverlayItem.swift */; };
+		6ADB06A624ADB3B70010A817 /* TrackConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB068424ADB3B70010A817 /* TrackConfiguration.swift */; };
+		6ADB06A724ADB3B70010A817 /* TrackItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB068524ADB3B70010A817 /* TrackItem.swift */; };
+		6ADB06A824ADB3B70010A817 /* ImageCompositionGroupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB068624ADB3B70010A817 /* ImageCompositionGroupProvider.swift */; };
+		6ADB06A924ADB3B70010A817 /* PHAssetLivePhotoResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB068824ADB3B70010A817 /* PHAssetLivePhotoResource.swift */; };
+		6ADB06AA24ADB3B70010A817 /* PHAssetTrackResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB068924ADB3B70010A817 /* PHAssetTrackResource.swift */; };
+		6ADB06AB24ADB3B70010A817 /* ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB068A24ADB3B70010A817 /* ImageResource.swift */; };
+		6ADB06AC24ADB3B70010A817 /* PHAssetImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB068B24ADB3B70010A817 /* PHAssetImageResource.swift */; };
+		6ADB06AD24ADB3B70010A817 /* AVAssetTrackResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB068C24ADB3B70010A817 /* AVAssetTrackResource.swift */; };
+		6ADB06AE24ADB3B70010A817 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB068D24ADB3B70010A817 /* Resource.swift */; };
+		6ADB06AF24ADB3B70010A817 /* AVAssetReaderImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB068E24ADB3B70010A817 /* AVAssetReaderImageResource.swift */; };
+		6ADB06B024ADB3B70010A817 /* AVAssetReverseImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB068F24ADB3B70010A817 /* AVAssetReverseImageResource.swift */; };
+		6ADB06B124ADB3B70010A817 /* CoreImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB069124ADB3B70010A817 /* CoreImageExtension.swift */; };
+		6ADB06B224ADB3B70010A817 /* TimingFunctionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB069224ADB3B70010A817 /* TimingFunctionFactory.swift */; };
+		6ADB06B324ADB3B70010A817 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB069324ADB3B70010A817 /* Log.swift */; };
+		6ADB06B424ADB3B70010A817 /* CGMathFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB069424ADB3B70010A817 /* CGMathFunctions.swift */; };
+		6ADB06B524ADB3B70010A817 /* CMTimeExtensition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB069524ADB3B70010A817 /* CMTimeExtensition.swift */; };
+		6ADB06B624ADB3B70010A817 /* ImageGeneratorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB069624ADB3B70010A817 /* ImageGeneratorExtension.swift */; };
+		6ADB06B724ADB3B70010A817 /* TimeRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB069724ADB3B70010A817 /* TimeRangeExtension.swift */; };
+		6ADB06B824ADB3B70010A817 /* black_empty.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6ADB069924ADB3B70010A817 /* black_empty.mp4 */; };
+		6ADB06CA24ADB55D0010A817 /* MetalVideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB06C924ADB55D0010A817 /* MetalVideoEditor.swift */; };
+		6ADB06E024ADB8B80010A817 /* MetalVideoProcessOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB06DE24ADB8B80010A817 /* MetalVideoProcessOperation.swift */; };
+		6ADB06EB24ADBBDA0010A817 /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB06E424ADBBDA0010A817 /* ImageGenerator.swift */; };
+		6ADB06ED24ADBBDA0010A817 /* PictureInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB06E624ADBBDA0010A817 /* PictureInput.swift */; };
+		6ADB06EF24ADBBDA0010A817 /* SolidColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB06E824ADBBDA0010A817 /* SolidColorGenerator.swift */; };
+		6ADB06F424ADBC760010A817 /* OperationShaderTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ADB06F324ADBC760010A817 /* OperationShaderTypes.h */; };
+		6ADB06F824ADBE1D0010A817 /* YUVToRGBConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB06F524ADBE1D0010A817 /* YUVToRGBConversion.swift */; };
+		6ADB06F924ADBE1D0010A817 /* YUVToRGBConversion.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB06F624ADBE1D0010A817 /* YUVToRGBConversion.metal */; };
+		6ADB06FA24ADBE1D0010A817 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB06F724ADBE1D0010A817 /* Camera.swift */; };
+		6ADB06FC24ADBF8F0010A817 /* MetalVideoProcessRenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB06FB24ADBF8F0010A817 /* MetalVideoProcessRenderView.swift */; };
+		6ADB06FF24ADC1930010A817 /* MetalVideoProcessBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB06FD24ADC1930010A817 /* MetalVideoProcessBlendFilter.swift */; };
+		6ADB070024ADC1930010A817 /* MetalVideoProcessBlendFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB06FE24ADC1930010A817 /* MetalVideoProcessBlendFilter.metal */; };
+		6ADB070524ADC4100010A817 /* PictureOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB070224ADC4100010A817 /* PictureOutput.swift */; };
+		6ADB070624ADC4100010A817 /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB070324ADC4100010A817 /* RenderView.swift */; };
+		6ADB070F24ADC4DC0010A817 /* MetalVideoProcessPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB070B24ADC4DC0010A817 /* MetalVideoProcessPlayer.swift */; };
+		6ADB071024ADC4DC0010A817 /* MetalVideoProcessPlayer+CompositorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB070C24ADC4DC0010A817 /* MetalVideoProcessPlayer+CompositorDelegate.swift */; };
+		6ADB071124ADC4DC0010A817 /* MetalVideoProcessMovieWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB070D24ADC4DC0010A817 /* MetalVideoProcessMovieWriter.swift */; };
+		6ADB071224ADC4DC0010A817 /* MetalVideoProcessCompositionRequestCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB070E24ADC4DC0010A817 /* MetalVideoProcessCompositionRequestCache.swift */; };
+		6ADB071724ADC4F80010A817 /* MetalVideoProcessBeautyFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB071324ADC4F80010A817 /* MetalVideoProcessBeautyFilter.swift */; };
+		6ADB071824ADC4F80010A817 /* MetalVideoProcessTransformFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB071424ADC4F80010A817 /* MetalVideoProcessTransformFilter.metal */; };
+		6ADB071924ADC4F80010A817 /* MetalVideoProcessTransformFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB071524ADC4F80010A817 /* MetalVideoProcessTransformFilter.swift */; };
+		6ADB071A24ADC4F80010A817 /* MetalVideoProcessBeautyFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB071624ADC4F80010A817 /* MetalVideoProcessBeautyFilter.metal */; };
+		6ADB071D24ADC8750010A817 /* MetalVideoProcessCompositor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB071C24ADC8750010A817 /* MetalVideoProcessCompositor.swift */; };
+		6ADB072224ADCB2A0010A817 /* MetalVideoProcessFilterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB072124ADCB290010A817 /* MetalVideoProcessFilterGroup.swift */; };
+		6ADB072424ADCBC30010A817 /* MetalVideoProcessGaussianBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB072324ADCBC30010A817 /* MetalVideoProcessGaussianBlurFilter.swift */; };
+		6ADB072624ADCC1C0010A817 /* MetalVideoProcessBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB072524ADCC1C0010A817 /* MetalVideoProcessBackground.swift */; };
+		6ADB072A24ADCC250010A817 /* MetalVideoProcessColorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB072724ADCC250010A817 /* MetalVideoProcessColorFilter.swift */; };
+		6ADB072B24ADCC250010A817 /* MetalVideoProcessColorFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB072824ADCC250010A817 /* MetalVideoProcessColorFilter.metal */; };
+		6ADB07E124AEDC9B0010A817 /* default.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB07E024AEDC9B0010A817 /* default.metal */; };
+		AB64836224C03E6200A0266B /* MetalVideoProcessShanBaiTrans.metal in Sources */ = {isa = PBXBuildFile; fileRef = AB64836024C03E6200A0266B /* MetalVideoProcessShanBaiTrans.metal */; };
+		AB64836324C03E6200A0266B /* MetalVideoProcessShanBaiTrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64836124C03E6200A0266B /* MetalVideoProcessShanBaiTrans.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6A3E705824BD9099009A0AC9 /* MetalVideoProcessTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessTransition.swift; sourceTree = "<group>"; };
+		6A3E708724C0448B009A0AC9 /* MetalVideoProcessFadeTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessFadeTransition.swift; sourceTree = "<group>"; };
+		6A3E708924C044A0009A0AC9 /* MetalVideoProcessFadeTransition.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MetalVideoProcessFadeTransition.metal; sourceTree = "<group>"; };
+		6AA561D124BC57F3004894F7 /* MetalVideoProcessLuminance.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalVideoProcessLuminance.metal; sourceTree = "<group>"; };
+		6AA561D224BC57F3004894F7 /* MetalVideoProcessLuminance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessLuminance.swift; sourceTree = "<group>"; };
+		6ADB062424AD885F0010A817 /* MetalVideoProcess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetalVideoProcess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ADB062724AD885F0010A817 /* MetalVideoProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalVideoProcess.h; sourceTree = "<group>"; };
+		6ADB062824AD885F0010A817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6ADB063A24AD8B7D0010A817 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		6ADB063C24AD8B7D0010A817 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		6ADB063F24AD8B7E0010A817 /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		6ADB064024AD8B7E0010A817 /* MetalRendering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalRendering.swift; sourceTree = "<group>"; };
+		6ADB064224AD8B7E0010A817 /* Pipeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pipeline.swift; sourceTree = "<group>"; };
+		6ADB064324AD8B7E0010A817 /* Timestamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timestamp.swift; sourceTree = "<group>"; };
+		6ADB064B24AD8B7E0010A817 /* ShaderUniformSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderUniformSettings.swift; sourceTree = "<group>"; };
+		6ADB064D24AD8B7E0010A817 /* MetalRenderingDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalRenderingDevice.swift; sourceTree = "<group>"; };
+		6ADB064E24AD8B7E0010A817 /* ImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOrientation.swift; sourceTree = "<group>"; };
+		6ADB065224AD8B7E0010A817 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		6ADB065324AD8B7E0010A817 /* Texture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
+		6ADB067424ADB3B70010A817 /* VideoCompositionInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCompositionInstruction.swift; sourceTree = "<group>"; };
+		6ADB067524ADB3B70010A817 /* VideoCompositor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCompositor.swift; sourceTree = "<group>"; };
+		6ADB067624ADB3B70010A817 /* CompositionGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionGenerator.swift; sourceTree = "<group>"; };
+		6ADB067824ADB3B70010A817 /* AudioProcessingTapHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioProcessingTapHolder.swift; sourceTree = "<group>"; };
+		6ADB067924ADB3B70010A817 /* AudioMixer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMixer.swift; sourceTree = "<group>"; };
+		6ADB067A24ADB3B70010A817 /* AudioProcessingChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioProcessingChain.swift; sourceTree = "<group>"; };
+		6ADB067C24ADB3B70010A817 /* VideoTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTransition.swift; sourceTree = "<group>"; };
+		6ADB067D24ADB3B70010A817 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		6ADB067E24ADB3B70010A817 /* CompositionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionProvider.swift; sourceTree = "<group>"; };
+		6ADB067F24ADB3B70010A817 /* AudioTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTransition.swift; sourceTree = "<group>"; };
+		6ADB068124ADB3B70010A817 /* ImageOverlayItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOverlayItem.swift; sourceTree = "<group>"; };
+		6ADB068424ADB3B70010A817 /* TrackConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackConfiguration.swift; sourceTree = "<group>"; };
+		6ADB068524ADB3B70010A817 /* TrackItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackItem.swift; sourceTree = "<group>"; };
+		6ADB068624ADB3B70010A817 /* ImageCompositionGroupProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCompositionGroupProvider.swift; sourceTree = "<group>"; };
+		6ADB068824ADB3B70010A817 /* PHAssetLivePhotoResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHAssetLivePhotoResource.swift; sourceTree = "<group>"; };
+		6ADB068924ADB3B70010A817 /* PHAssetTrackResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHAssetTrackResource.swift; sourceTree = "<group>"; };
+		6ADB068A24ADB3B70010A817 /* ImageResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResource.swift; sourceTree = "<group>"; };
+		6ADB068B24ADB3B70010A817 /* PHAssetImageResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHAssetImageResource.swift; sourceTree = "<group>"; };
+		6ADB068C24ADB3B70010A817 /* AVAssetTrackResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAssetTrackResource.swift; sourceTree = "<group>"; };
+		6ADB068D24ADB3B70010A817 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		6ADB068E24ADB3B70010A817 /* AVAssetReaderImageResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAssetReaderImageResource.swift; sourceTree = "<group>"; };
+		6ADB068F24ADB3B70010A817 /* AVAssetReverseImageResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAssetReverseImageResource.swift; sourceTree = "<group>"; };
+		6ADB069124ADB3B70010A817 /* CoreImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreImageExtension.swift; sourceTree = "<group>"; };
+		6ADB069224ADB3B70010A817 /* TimingFunctionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingFunctionFactory.swift; sourceTree = "<group>"; };
+		6ADB069324ADB3B70010A817 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		6ADB069424ADB3B70010A817 /* CGMathFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGMathFunctions.swift; sourceTree = "<group>"; };
+		6ADB069524ADB3B70010A817 /* CMTimeExtensition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMTimeExtensition.swift; sourceTree = "<group>"; };
+		6ADB069624ADB3B70010A817 /* ImageGeneratorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGeneratorExtension.swift; sourceTree = "<group>"; };
+		6ADB069724ADB3B70010A817 /* TimeRangeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeRangeExtension.swift; sourceTree = "<group>"; };
+		6ADB069924ADB3B70010A817 /* black_empty.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = black_empty.mp4; sourceTree = "<group>"; };
+		6ADB06C924ADB55D0010A817 /* MetalVideoEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoEditor.swift; sourceTree = "<group>"; };
+		6ADB06DE24ADB8B80010A817 /* MetalVideoProcessOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessOperation.swift; sourceTree = "<group>"; };
+		6ADB06E424ADBBDA0010A817 /* ImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
+		6ADB06E624ADBBDA0010A817 /* PictureInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureInput.swift; sourceTree = "<group>"; };
+		6ADB06E824ADBBDA0010A817 /* SolidColorGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolidColorGenerator.swift; sourceTree = "<group>"; };
+		6ADB06F324ADBC760010A817 /* OperationShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationShaderTypes.h; sourceTree = "<group>"; };
+		6ADB06F524ADBE1D0010A817 /* YUVToRGBConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YUVToRGBConversion.swift; sourceTree = "<group>"; };
+		6ADB06F624ADBE1D0010A817 /* YUVToRGBConversion.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = YUVToRGBConversion.metal; sourceTree = "<group>"; };
+		6ADB06F724ADBE1D0010A817 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		6ADB06FB24ADBF8F0010A817 /* MetalVideoProcessRenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessRenderView.swift; sourceTree = "<group>"; };
+		6ADB06FD24ADC1930010A817 /* MetalVideoProcessBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessBlendFilter.swift; sourceTree = "<group>"; };
+		6ADB06FE24ADC1930010A817 /* MetalVideoProcessBlendFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalVideoProcessBlendFilter.metal; sourceTree = "<group>"; };
+		6ADB070224ADC4100010A817 /* PictureOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureOutput.swift; sourceTree = "<group>"; };
+		6ADB070324ADC4100010A817 /* RenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
+		6ADB070B24ADC4DC0010A817 /* MetalVideoProcessPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessPlayer.swift; sourceTree = "<group>"; };
+		6ADB070C24ADC4DC0010A817 /* MetalVideoProcessPlayer+CompositorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MetalVideoProcessPlayer+CompositorDelegate.swift"; sourceTree = "<group>"; };
+		6ADB070D24ADC4DC0010A817 /* MetalVideoProcessMovieWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessMovieWriter.swift; sourceTree = "<group>"; };
+		6ADB070E24ADC4DC0010A817 /* MetalVideoProcessCompositionRequestCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessCompositionRequestCache.swift; sourceTree = "<group>"; };
+		6ADB071324ADC4F80010A817 /* MetalVideoProcessBeautyFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessBeautyFilter.swift; sourceTree = "<group>"; };
+		6ADB071424ADC4F80010A817 /* MetalVideoProcessTransformFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalVideoProcessTransformFilter.metal; sourceTree = "<group>"; };
+		6ADB071524ADC4F80010A817 /* MetalVideoProcessTransformFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessTransformFilter.swift; sourceTree = "<group>"; };
+		6ADB071624ADC4F80010A817 /* MetalVideoProcessBeautyFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalVideoProcessBeautyFilter.metal; sourceTree = "<group>"; };
+		6ADB071C24ADC8750010A817 /* MetalVideoProcessCompositor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessCompositor.swift; sourceTree = "<group>"; };
+		6ADB072124ADCB290010A817 /* MetalVideoProcessFilterGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessFilterGroup.swift; sourceTree = "<group>"; };
+		6ADB072324ADCBC30010A817 /* MetalVideoProcessGaussianBlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessGaussianBlurFilter.swift; sourceTree = "<group>"; };
+		6ADB072524ADCC1C0010A817 /* MetalVideoProcessBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessBackground.swift; sourceTree = "<group>"; };
+		6ADB072724ADCC250010A817 /* MetalVideoProcessColorFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessColorFilter.swift; sourceTree = "<group>"; };
+		6ADB072824ADCC250010A817 /* MetalVideoProcessColorFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalVideoProcessColorFilter.metal; sourceTree = "<group>"; };
+		6ADB07D524AED1260010A817 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6ADB07E024AEDC9B0010A817 /* default.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = default.metal; sourceTree = "<group>"; };
+		AB64836024C03E6200A0266B /* MetalVideoProcessShanBaiTrans.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalVideoProcessShanBaiTrans.metal; sourceTree = "<group>"; };
+		AB64836124C03E6200A0266B /* MetalVideoProcessShanBaiTrans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessShanBaiTrans.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6ADB062124AD885F0010A817 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6ADB061A24AD885F0010A817 = {
+			isa = PBXGroup;
+			children = (
+				6ADB07D524AED1260010A817 /* README.md */,
+				6ADB062624AD885F0010A817 /* MetalVideoProcess */,
+				6ADB062524AD885F0010A817 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6ADB062524AD885F0010A817 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB062424AD885F0010A817 /* MetalVideoProcess.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6ADB062624AD885F0010A817 /* MetalVideoProcess */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB06E224ADBB300010A817 /* Vender */,
+				6ADB06E124ADBB1C0010A817 /* VideoProcess */,
+				6ADB062724AD885F0010A817 /* MetalVideoProcess.h */,
+				6ADB062824AD885F0010A817 /* Info.plist */,
+			);
+			path = MetalVideoProcess;
+			sourceTree = "<group>";
+		};
+		6ADB062F24AD89590010A817 /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB063224AD8B1A0010A817 /* Base */,
+				6ADB063324AD8B210010A817 /* Inputs */,
+				6ADB063524AD8B2F0010A817 /* Outputs */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
+		6ADB063124AD89660010A817 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB067224ADB3B70010A817 /* Core */,
+				6ADB069824ADB3B70010A817 /* Resource */,
+				6ADB068024ADB3B70010A817 /* Track */,
+				6ADB069024ADB3B70010A817 /* Uitl */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		6ADB063224AD8B1A0010A817 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB07E024AEDC9B0010A817 /* default.metal */,
+				6ADB06F324ADBC760010A817 /* OperationShaderTypes.h */,
+				6ADB063A24AD8B7D0010A817 /* Color.swift */,
+				6ADB064E24AD8B7E0010A817 /* ImageOrientation.swift */,
+				6ADB063C24AD8B7D0010A817 /* Matrix.swift */,
+				6ADB064024AD8B7E0010A817 /* MetalRendering.swift */,
+				6ADB064D24AD8B7E0010A817 /* MetalRenderingDevice.swift */,
+				6ADB064224AD8B7E0010A817 /* Pipeline.swift */,
+				6ADB065224AD8B7E0010A817 /* Position.swift */,
+				6ADB064B24AD8B7E0010A817 /* ShaderUniformSettings.swift */,
+				6ADB063F24AD8B7E0010A817 /* Size.swift */,
+				6ADB065324AD8B7E0010A817 /* Texture.swift */,
+				6ADB064324AD8B7E0010A817 /* Timestamp.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6ADB063324AD8B210010A817 /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB06E424ADBBDA0010A817 /* ImageGenerator.swift */,
+				6ADB06E624ADBBDA0010A817 /* PictureInput.swift */,
+				6ADB06E824ADBBDA0010A817 /* SolidColorGenerator.swift */,
+				6ADB06F724ADBE1D0010A817 /* Camera.swift */,
+				6ADB06F624ADBE1D0010A817 /* YUVToRGBConversion.metal */,
+				6ADB06F524ADBE1D0010A817 /* YUVToRGBConversion.swift */,
+			);
+			path = Inputs;
+			sourceTree = "<group>";
+		};
+		6ADB063524AD8B2F0010A817 /* Outputs */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB070224ADC4100010A817 /* PictureOutput.swift */,
+				6ADB070324ADC4100010A817 /* RenderView.swift */,
+			);
+			path = Outputs;
+			sourceTree = "<group>";
+		};
+		6ADB067224ADB3B70010A817 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB067324ADB3B70010A817 /* Video */,
+				6ADB067624ADB3B70010A817 /* CompositionGenerator.swift */,
+				6ADB067724ADB3B70010A817 /* Audio */,
+				6ADB067B24ADB3B70010A817 /* Model */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		6ADB067324ADB3B70010A817 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB067424ADB3B70010A817 /* VideoCompositionInstruction.swift */,
+				6ADB067524ADB3B70010A817 /* VideoCompositor.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		6ADB067724ADB3B70010A817 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB067824ADB3B70010A817 /* AudioProcessingTapHolder.swift */,
+				6ADB067924ADB3B70010A817 /* AudioMixer.swift */,
+				6ADB067A24ADB3B70010A817 /* AudioProcessingChain.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		6ADB067B24ADB3B70010A817 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB067C24ADB3B70010A817 /* VideoTransition.swift */,
+				6ADB067D24ADB3B70010A817 /* Timeline.swift */,
+				6ADB067E24ADB3B70010A817 /* CompositionProvider.swift */,
+				6ADB067F24ADB3B70010A817 /* AudioTransition.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6ADB068024ADB3B70010A817 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB068124ADB3B70010A817 /* ImageOverlayItem.swift */,
+				6ADB068224ADB3B70010A817 /* Configuration */,
+				6ADB068524ADB3B70010A817 /* TrackItem.swift */,
+				6ADB068624ADB3B70010A817 /* ImageCompositionGroupProvider.swift */,
+				6ADB068724ADB3B70010A817 /* Resource */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		6ADB068224ADB3B70010A817 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB068424ADB3B70010A817 /* TrackConfiguration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		6ADB068724ADB3B70010A817 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB068824ADB3B70010A817 /* PHAssetLivePhotoResource.swift */,
+				6ADB068924ADB3B70010A817 /* PHAssetTrackResource.swift */,
+				6ADB068A24ADB3B70010A817 /* ImageResource.swift */,
+				6ADB068B24ADB3B70010A817 /* PHAssetImageResource.swift */,
+				6ADB068C24ADB3B70010A817 /* AVAssetTrackResource.swift */,
+				6ADB068D24ADB3B70010A817 /* Resource.swift */,
+				6ADB068E24ADB3B70010A817 /* AVAssetReaderImageResource.swift */,
+				6ADB068F24ADB3B70010A817 /* AVAssetReverseImageResource.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6ADB069024ADB3B70010A817 /* Uitl */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB069124ADB3B70010A817 /* CoreImageExtension.swift */,
+				6ADB069224ADB3B70010A817 /* TimingFunctionFactory.swift */,
+				6ADB069324ADB3B70010A817 /* Log.swift */,
+				6ADB069424ADB3B70010A817 /* CGMathFunctions.swift */,
+				6ADB069524ADB3B70010A817 /* CMTimeExtensition.swift */,
+				6ADB069624ADB3B70010A817 /* ImageGeneratorExtension.swift */,
+				6ADB069724ADB3B70010A817 /* TimeRangeExtension.swift */,
+			);
+			path = Uitl;
+			sourceTree = "<group>";
+		};
+		6ADB069824ADB3B70010A817 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB069924ADB3B70010A817 /* black_empty.mp4 */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6ADB06E124ADBB1C0010A817 /* VideoProcess */ = {
+			isa = PBXGroup;
+			children = (
+				AB64835724C03CEA00A0266B /* Transition */,
+				6ADB071E24ADC93D0010A817 /* Base */,
+				6ADB071B24ADC4FB0010A817 /* Filters */,
+				6ADB070B24ADC4DC0010A817 /* MetalVideoProcessPlayer.swift */,
+				6ADB070C24ADC4DC0010A817 /* MetalVideoProcessPlayer+CompositorDelegate.swift */,
+				6ADB070D24ADC4DC0010A817 /* MetalVideoProcessMovieWriter.swift */,
+				6ADB06FB24ADBF8F0010A817 /* MetalVideoProcessRenderView.swift */,
+				6ADB06C924ADB55D0010A817 /* MetalVideoEditor.swift */,
+			);
+			path = VideoProcess;
+			sourceTree = "<group>";
+		};
+		6ADB06E224ADBB300010A817 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB063124AD89660010A817 /* Editor */,
+				6ADB062F24AD89590010A817 /* Render */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		6ADB071B24ADC4FB0010A817 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				6AA561D124BC57F3004894F7 /* MetalVideoProcessLuminance.metal */,
+				6AA561D224BC57F3004894F7 /* MetalVideoProcessLuminance.swift */,
+				6ADB072824ADCC250010A817 /* MetalVideoProcessColorFilter.metal */,
+				6ADB072724ADCC250010A817 /* MetalVideoProcessColorFilter.swift */,
+				6ADB072324ADCBC30010A817 /* MetalVideoProcessGaussianBlurFilter.swift */,
+				6ADB072524ADCC1C0010A817 /* MetalVideoProcessBackground.swift */,
+				6ADB072124ADCB290010A817 /* MetalVideoProcessFilterGroup.swift */,
+				6ADB06FE24ADC1930010A817 /* MetalVideoProcessBlendFilter.metal */,
+				6ADB06FD24ADC1930010A817 /* MetalVideoProcessBlendFilter.swift */,
+				6ADB071624ADC4F80010A817 /* MetalVideoProcessBeautyFilter.metal */,
+				6ADB071324ADC4F80010A817 /* MetalVideoProcessBeautyFilter.swift */,
+				6ADB071424ADC4F80010A817 /* MetalVideoProcessTransformFilter.metal */,
+				6ADB071524ADC4F80010A817 /* MetalVideoProcessTransformFilter.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		6ADB071E24ADC93D0010A817 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB06DE24ADB8B80010A817 /* MetalVideoProcessOperation.swift */,
+				6ADB071C24ADC8750010A817 /* MetalVideoProcessCompositor.swift */,
+				6ADB070E24ADC4DC0010A817 /* MetalVideoProcessCompositionRequestCache.swift */,
+				6A3E705824BD9099009A0AC9 /* MetalVideoProcessTransition.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AB64835724C03CEA00A0266B /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				AB64836024C03E6200A0266B /* MetalVideoProcessShanBaiTrans.metal */,
+				AB64836124C03E6200A0266B /* MetalVideoProcessShanBaiTrans.swift */,
+				6A3E708724C0448B009A0AC9 /* MetalVideoProcessFadeTransition.swift */,
+				6A3E708924C044A0009A0AC9 /* MetalVideoProcessFadeTransition.metal */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6ADB061F24AD885F0010A817 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ADB062924AD885F0010A817 /* MetalVideoProcess.h in Headers */,
+				6ADB06F424ADBC760010A817 /* OperationShaderTypes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6ADB062324AD885F0010A817 /* MetalVideoProcess */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6ADB062C24AD885F0010A817 /* Build configuration list for PBXNativeTarget "MetalVideoProcess" */;
+			buildPhases = (
+				6ADB061F24AD885F0010A817 /* Headers */,
+				6ADB062024AD885F0010A817 /* Sources */,
+				6ADB062124AD885F0010A817 /* Frameworks */,
+				6ADB062224AD885F0010A817 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalVideoProcess;
+			productName = MetalVideoProcess;
+			productReference = 6ADB062424AD885F0010A817 /* MetalVideoProcess.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6ADB061B24AD885F0010A817 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "RenZhu Macro";
+				TargetAttributes = {
+					6ADB062324AD885F0010A817 = {
+						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
+					};
+				};
+			};
+			buildConfigurationList = 6ADB061E24AD885F0010A817 /* Build configuration list for PBXProject "MetalVideoProcess" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6ADB061A24AD885F0010A817;
+			productRefGroup = 6ADB062524AD885F0010A817 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6ADB062324AD885F0010A817 /* MetalVideoProcess */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6ADB062224AD885F0010A817 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ADB06B824ADB3B70010A817 /* black_empty.mp4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6ADB062024AD885F0010A817 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ADB072A24ADCC250010A817 /* MetalVideoProcessColorFilter.swift in Sources */,
+				6ADB071124ADC4DC0010A817 /* MetalVideoProcessMovieWriter.swift in Sources */,
+				6ADB06A224ADB3B70010A817 /* CompositionProvider.swift in Sources */,
+				6ADB06F924ADBE1D0010A817 /* YUVToRGBConversion.metal in Sources */,
+				6A3E708824C0448B009A0AC9 /* MetalVideoProcessFadeTransition.swift in Sources */,
+				6ADB065E24AD8B7E0010A817 /* MetalRendering.swift in Sources */,
+				6ADB06B524ADB3B70010A817 /* CMTimeExtensition.swift in Sources */,
+				6ADB06B024ADB3B70010A817 /* AVAssetReverseImageResource.swift in Sources */,
+				6ADB070524ADC4100010A817 /* PictureOutput.swift in Sources */,
+				6ADB070F24ADC4DC0010A817 /* MetalVideoProcessPlayer.swift in Sources */,
+				6ADB06AE24ADB3B70010A817 /* Resource.swift in Sources */,
+				6ADB06B624ADB3B70010A817 /* ImageGeneratorExtension.swift in Sources */,
+				AB64836324C03E6200A0266B /* MetalVideoProcessShanBaiTrans.swift in Sources */,
+				6ADB069B24ADB3B70010A817 /* VideoCompositor.swift in Sources */,
+				6ADB066C24AD8B7E0010A817 /* ImageOrientation.swift in Sources */,
+				6ADB069E24ADB3B70010A817 /* AudioMixer.swift in Sources */,
+				6ADB071824ADC4F80010A817 /* MetalVideoProcessTransformFilter.metal in Sources */,
+				6ADB065824AD8B7E0010A817 /* Color.swift in Sources */,
+				6ADB06A324ADB3B70010A817 /* AudioTransition.swift in Sources */,
+				6ADB069C24ADB3B70010A817 /* CompositionGenerator.swift in Sources */,
+				6ADB06EF24ADBBDA0010A817 /* SolidColorGenerator.swift in Sources */,
+				6ADB06AD24ADB3B70010A817 /* AVAssetTrackResource.swift in Sources */,
+				6ADB066B24AD8B7E0010A817 /* MetalRenderingDevice.swift in Sources */,
+				6ADB06A124ADB3B70010A817 /* Timeline.swift in Sources */,
+				6ADB06B324ADB3B70010A817 /* Log.swift in Sources */,
+				6ADB065D24AD8B7E0010A817 /* Size.swift in Sources */,
+				6ADB070024ADC1930010A817 /* MetalVideoProcessBlendFilter.metal in Sources */,
+				6ADB06B124ADB3B70010A817 /* CoreImageExtension.swift in Sources */,
+				6ADB06E024ADB8B80010A817 /* MetalVideoProcessOperation.swift in Sources */,
+				6ADB071A24ADC4F80010A817 /* MetalVideoProcessBeautyFilter.metal in Sources */,
+				6ADB06EB24ADBBDA0010A817 /* ImageGenerator.swift in Sources */,
+				6ADB06B724ADB3B70010A817 /* TimeRangeExtension.swift in Sources */,
+				6ADB06CA24ADB55D0010A817 /* MetalVideoEditor.swift in Sources */,
+				6ADB07E124AEDC9B0010A817 /* default.metal in Sources */,
+				6ADB06ED24ADBBDA0010A817 /* PictureInput.swift in Sources */,
+				AB64836224C03E6200A0266B /* MetalVideoProcessShanBaiTrans.metal in Sources */,
+				6ADB06A624ADB3B70010A817 /* TrackConfiguration.swift in Sources */,
+				6ADB071224ADC4DC0010A817 /* MetalVideoProcessCompositionRequestCache.swift in Sources */,
+				6ADB06A824ADB3B70010A817 /* ImageCompositionGroupProvider.swift in Sources */,
+				6ADB06FF24ADC1930010A817 /* MetalVideoProcessBlendFilter.swift in Sources */,
+				6ADB066124AD8B7E0010A817 /* Timestamp.swift in Sources */,
+				6ADB071724ADC4F80010A817 /* MetalVideoProcessBeautyFilter.swift in Sources */,
+				6ADB06AF24ADB3B70010A817 /* AVAssetReaderImageResource.swift in Sources */,
+				6ADB072B24ADCC250010A817 /* MetalVideoProcessColorFilter.metal in Sources */,
+				6ADB072624ADCC1C0010A817 /* MetalVideoProcessBackground.swift in Sources */,
+				6ADB071D24ADC8750010A817 /* MetalVideoProcessCompositor.swift in Sources */,
+				6ADB06B424ADB3B70010A817 /* CGMathFunctions.swift in Sources */,
+				6AA561D324BC57F3004894F7 /* MetalVideoProcessLuminance.metal in Sources */,
+				6ADB065A24AD8B7E0010A817 /* Matrix.swift in Sources */,
+				6ADB069F24ADB3B70010A817 /* AudioProcessingChain.swift in Sources */,
+				6ADB06A424ADB3B70010A817 /* ImageOverlayItem.swift in Sources */,
+				6ADB071924ADC4F80010A817 /* MetalVideoProcessTransformFilter.swift in Sources */,
+				6A3E708A24C044A0009A0AC9 /* MetalVideoProcessFadeTransition.metal in Sources */,
+				6ADB06FC24ADBF8F0010A817 /* MetalVideoProcessRenderView.swift in Sources */,
+				6ADB06AB24ADB3B70010A817 /* ImageResource.swift in Sources */,
+				6AA561D424BC57F3004894F7 /* MetalVideoProcessLuminance.swift in Sources */,
+				6ADB06A724ADB3B70010A817 /* TrackItem.swift in Sources */,
+				6ADB066924AD8B7E0010A817 /* ShaderUniformSettings.swift in Sources */,
+				6ADB071024ADC4DC0010A817 /* MetalVideoProcessPlayer+CompositorDelegate.swift in Sources */,
+				6ADB06B224ADB3B70010A817 /* TimingFunctionFactory.swift in Sources */,
+				6ADB072424ADCBC30010A817 /* MetalVideoProcessGaussianBlurFilter.swift in Sources */,
+				6ADB070624ADC4100010A817 /* RenderView.swift in Sources */,
+				6ADB06F824ADBE1D0010A817 /* YUVToRGBConversion.swift in Sources */,
+				6ADB069D24ADB3B70010A817 /* AudioProcessingTapHolder.swift in Sources */,
+				6ADB067024AD8B7E0010A817 /* Position.swift in Sources */,
+				6ADB06A024ADB3B70010A817 /* VideoTransition.swift in Sources */,
+				6ADB067124AD8B7E0010A817 /* Texture.swift in Sources */,
+				6ADB069A24ADB3B70010A817 /* VideoCompositionInstruction.swift in Sources */,
+				6ADB072224ADCB2A0010A817 /* MetalVideoProcessFilterGroup.swift in Sources */,
+				6ADB06AC24ADB3B70010A817 /* PHAssetImageResource.swift in Sources */,
+				6ADB066024AD8B7E0010A817 /* Pipeline.swift in Sources */,
+				6ADB06A924ADB3B70010A817 /* PHAssetLivePhotoResource.swift in Sources */,
+				6A3E705924BD9099009A0AC9 /* MetalVideoProcessTransition.swift in Sources */,
+				6ADB06FA24ADBE1D0010A817 /* Camera.swift in Sources */,
+				6ADB06AA24ADB3B70010A817 /* PHAssetTrackResource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6ADB062A24AD885F0010A817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6ADB062B24AD885F0010A817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6ADB062D24AD885F0010A817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RYRPKMVKDL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MetalVideoProcess/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangrenzhu.MetalVideoProcess;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6ADB062E24AD885F0010A817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RYRPKMVKDL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MetalVideoProcess/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangrenzhu.MetalVideoProcess;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6ADB061E24AD885F0010A817 /* Build configuration list for PBXProject "MetalVideoProcess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ADB062A24AD885F0010A817 /* Debug */,
+				6ADB062B24AD885F0010A817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6ADB062C24AD885F0010A817 /* Build configuration list for PBXNativeTarget "MetalVideoProcess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ADB062D24AD885F0010A817 /* Debug */,
+				6ADB062E24AD885F0010A817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6ADB061B24AD885F0010A817 /* Project object */;
+}
