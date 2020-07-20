@@ -37,17 +37,13 @@ class ViewController: UIViewController {
         let backgroundFrame = self.renderView.frame
         let backgroundSize = CGSize(width: backgroundFrame.size.width * 1.5,
                                     height: backgroundFrame.size.height * 1.5)
-        MetalVideoProcessBackground.canvasSize = backgroundSize
-        
+        MetalVideoProcessBackground.canvasSize = backgroundSize  
         
         let transform1 = MetalVideoProcessTransformFilter()
         let transform2 = MetalVideoProcessTransformFilter()
         let transform3 = MetalVideoProcessTransformFilter()
         let transform4 = MetalVideoProcessTransformFilter()
-        
-     
-    
-        
+
         transform1.stretchType = .aspectToFit
         transform1.roi = CGRect(x: 0.1, y: 0.1,
                                 width: 0.8,
@@ -83,49 +79,37 @@ class ViewController: UIViewController {
             player.addTarget(transform4, trackID: item4.trackID, targetTrackId: item4.trackID)
             
             transform1.saveUniformSettings(forTimelineRange: item1.timeRange, trackID: item1.trackID)
-//
+
             transform2.saveUniformSettings(forTimelineRange: item2.timeRange, trackID: item2.trackID)
-//
+
             transform3.saveUniformSettings(forTimelineRange: item3.timeRange, trackID: item3.trackID)
-//
+
             transform4.saveUniformSettings(forTimelineRange: item4.timeRange, trackID: item4.trackID)
 
             let layer1 = MetalVideoProcessBlendFilter()
             
             background --> layer1
             transform1 --> layer1
-            
-//            layer1.saveUniformSettings(forTimelineRange: item1.timeRange, trackID: item1.trackID)
 
             let layer2 = MetalVideoProcessBlendFilter()
             
             layer1 --> layer2
             transform2 --> layer2
-//
-//            layer2.saveUniformSettings(forTimelineRange: item2.timeRange, trackID: item2.trackID)
-//
+
             let layer3 = MetalVideoProcessBlendFilter()
             
             layer2 --> layer3
             transform3 --> layer3
-//            layer3.saveUniformSettings(forTimelineRange: item3.timeRange, trackID: item3.trackID)
-            
+   
             let layer4 = MetalVideoProcessBlendFilter()
             
             layer3 --> layer4
             transform4 --> layer4
-//            layer4.saveUniformSettings(forTimelineRange: item4.timeRange, trackID: item4.trackID)
-//
-            
+     
             self.progress.minimumValue = 0.0
             self.progress.maximumValue = Float(playerItem.duration.seconds)
-           
 
-           
             layer4 --> renderView
-//            layer3 --> self.renderView
-//            transform1 --> self.renderView
-
             self.player = player
             self.player?.playerDelegate = self
             

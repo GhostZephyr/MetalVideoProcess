@@ -68,10 +68,7 @@ class ViewController: UIViewController {
             transform1.saveUniformSettings(forTimelineRange: item1.timeRange, trackID: item1.trackID)
             
             transform2.saveUniformSettings(forTimelineRange: item2.timeRange, trackID: item2.trackID)
-            
-            
-            
-            
+
             let layer1 = MetalVideoProcessBlendFilter()
             
             videoBackground --> layer1
