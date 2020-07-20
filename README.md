@@ -14,7 +14,7 @@ MetalVideoProcess is a High-Performance video effects processing framework. It's
 
 MetalVideoProcess is built on  GPUImage3 & Cabbage. We extend the rendering pipeline in gpuimage3 to adapt the rendering output of one to many targets, so as to realize the rendering of multiple video clips.
 
-![Layer](/Users/renzhumacro/Documents/github/MetalVideoProcess/Readme/Layer.png)
+![Layer](Readme/Layer.png)
 
 
 
@@ -22,7 +22,7 @@ Architecture design of video transition:
 
 
 
-![videoTransitionDesign](/Users/renzhumacro/Documents/github/MetalVideoProcess/Readme/videoTransitionDesign.png)
+![videoTransitionDesign](Readme/videoTransitionDesign.png)
 
 
 
