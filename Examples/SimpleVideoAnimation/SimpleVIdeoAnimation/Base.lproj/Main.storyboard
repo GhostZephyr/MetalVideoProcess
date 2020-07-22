@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleVideoAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXj-LY-59h" customClass="MetalVideoProcessRenderView" customModule="MetalVideoProcess">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FXj-LY-59h" secondAttribute="height" id="iBP-Gu-Wj9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLe-Zn-niL">
+                                <rect key="frame" x="166.5" y="515" width="42" height="30"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jXA-Ko-2E5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lP-KN-D4J">
+                                <rect key="frame" x="172.5" y="475" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BxN-gS-f9o"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JkB-hg-7A6" customClass="TrimmerView" customModule="PryntTrimmerView">
+                                <rect key="frame" x="0.0" y="385" width="375" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="9zr-ar-gfx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9lP-KN-D4J" firstAttribute="top" secondItem="JkB-hg-7A6" secondAttribute="bottom" constant="10" id="EVm-H0-xCG"/>
+                            <constraint firstItem="FXj-LY-59h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hbb-9e-X3i"/>
+                            <constraint firstItem="gLe-Zn-niL" firstAttribute="top" secondItem="9lP-KN-D4J" secondAttribute="bottom" constant="10" id="RPS-Ea-blL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JkB-hg-7A6" secondAttribute="trailing" id="SQ5-rc-Ie3"/>
+                            <constraint firstItem="9lP-KN-D4J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T7k-7C-oA5"/>
+                            <constraint firstItem="gLe-Zn-niL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z0h-3k-NiZ"/>
+                            <constraint firstItem="JkB-hg-7A6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bea-xO-Fs7"/>
+                            <constraint firstItem="FXj-LY-59h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cew-hA-jt7"/>
+                            <constraint firstItem="JkB-hg-7A6" firstAttribute="top" secondItem="FXj-LY-59h" secondAttribute="bottom" constant="10" id="rCV-zQ-Eyi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FXj-LY-59h" secondAttribute="trailing" id="rUK-5t-TAP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="JkB-hg-7A6" id="eky-zy-L0Z"/>
+                        <outlet property="renderView" destination="FXj-LY-59h" id="8pT-q1-cV2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="138"/>
+        </scene>
+    </scenes>
+</document>

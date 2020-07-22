@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0194809395268398D3F15306 /* Pods_SimpleVideoAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B763834C8C3CCC5972A2A2 /* Pods_SimpleVideoAnimation.framework */; };
+		6A54C20024C7DE9200EF216E /* cute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6A54C1FE24C7DE9200EF216E /* cute.mp4 */; };
+		6A874BA024C53EF700ADFD8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A874B9F24C53EF700ADFD8A /* AppDelegate.swift */; };
+		6A874BA224C53EF700ADFD8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A874BA124C53EF700ADFD8A /* SceneDelegate.swift */; };
+		6A874BA424C53EF700ADFD8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A874BA324C53EF700ADFD8A /* ViewController.swift */; };
+		6A874BA724C53EF700ADFD8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A874BA524C53EF700ADFD8A /* Main.storyboard */; };
+		6A874BA924C53EF800ADFD8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A874BA824C53EF800ADFD8A /* Assets.xcassets */; };
+		6A874BAC24C53EF800ADFD8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A874BAA24C53EF800ADFD8A /* LaunchScreen.storyboard */; };
+		6A874BB924C5462C00ADFD8A /* MetalVideoProcess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A874BB824C545CC00ADFD8A /* MetalVideoProcess.framework */; };
+		6A874BBA24C5462C00ADFD8A /* MetalVideoProcess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A874BB824C545CC00ADFD8A /* MetalVideoProcess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6A874BDA24C6FDE200ADFD8A /* 853.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6A874BD824C6FDE200ADFD8A /* 853.mp4 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6A874BB724C545CC00ADFD8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A874BB324C545CC00ADFD8A /* MetalVideoProcess.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6ADB062424AD885F0010A817;
+			remoteInfo = MetalVideoProcess;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6A874BBB24C5462C00ADFD8A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6A874BBA24C5462C00ADFD8A /* MetalVideoProcess.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		16B763834C8C3CCC5972A2A2 /* Pods_SimpleVideoAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleVideoAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A54C1FE24C7DE9200EF216E /* cute.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cute.mp4; sourceTree = "<group>"; };
+		6A874B9C24C53EF700ADFD8A /* SimpleVideoAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleVideoAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A874B9F24C53EF700ADFD8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6A874BA124C53EF700ADFD8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6A874BA324C53EF700ADFD8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6A874BA624C53EF700ADFD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6A874BA824C53EF800ADFD8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A874BAB24C53EF800ADFD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6A874BAD24C53EF800ADFD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A874BB324C545CC00ADFD8A /* MetalVideoProcess.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MetalVideoProcess.xcodeproj; path = ../../MetalVideoProcess.xcodeproj; sourceTree = "<group>"; };
+		6A874BD824C6FDE200ADFD8A /* 853.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 853.mp4; path = SimpleVIdeoAnimation/853.mp4; sourceTree = SOURCE_ROOT; };
+		A512CD4DD2F5AB414CF01FE6 /* Pods-SimpleVideoAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleVideoAnimation.release.xcconfig"; path = "Target Support Files/Pods-SimpleVideoAnimation/Pods-SimpleVideoAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		D107CF0887B69DDEA376CBEA /* Pods-SimpleVideoAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleVideoAnimation.debug.xcconfig"; path = "Target Support Files/Pods-SimpleVideoAnimation/Pods-SimpleVideoAnimation.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6A874B9924C53EF700ADFD8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A874BB924C5462C00ADFD8A /* MetalVideoProcess.framework in Frameworks */,
+				0194809395268398D3F15306 /* Pods_SimpleVideoAnimation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09662178662A79DB0CFDDB51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16B763834C8C3CCC5972A2A2 /* Pods_SimpleVideoAnimation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A874B9324C53EF700ADFD8A = {
+			isa = PBXGroup;
+			children = (
+				6A874BB324C545CC00ADFD8A /* MetalVideoProcess.xcodeproj */,
+				6A874B9E24C53EF700ADFD8A /* SimpleVideoAnimation */,
+				6A874B9D24C53EF700ADFD8A /* Products */,
+				99120D7228A6AD7ADD24AEFC /* Pods */,
+				09662178662A79DB0CFDDB51 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6A874B9D24C53EF700ADFD8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A874B9C24C53EF700ADFD8A /* SimpleVideoAnimation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A874B9E24C53EF700ADFD8A /* SimpleVideoAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				6A874BD824C6FDE200ADFD8A /* 853.mp4 */,
+				6A54C1FE24C7DE9200EF216E /* cute.mp4 */,
+				6A874B9F24C53EF700ADFD8A /* AppDelegate.swift */,
+				6A874BA124C53EF700ADFD8A /* SceneDelegate.swift */,
+				6A874BA324C53EF700ADFD8A /* ViewController.swift */,
+				6A874BA524C53EF700ADFD8A /* Main.storyboard */,
+				6A874BA824C53EF800ADFD8A /* Assets.xcassets */,
+				6A874BAA24C53EF800ADFD8A /* LaunchScreen.storyboard */,
+				6A874BAD24C53EF800ADFD8A /* Info.plist */,
+			);
+			path = SimpleVideoAnimation;
+			sourceTree = "<group>";
+		};
+		6A874BB424C545CC00ADFD8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A874BB824C545CC00ADFD8A /* MetalVideoProcess.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99120D7228A6AD7ADD24AEFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D107CF0887B69DDEA376CBEA /* Pods-SimpleVideoAnimation.debug.xcconfig */,
+				A512CD4DD2F5AB414CF01FE6 /* Pods-SimpleVideoAnimation.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A874B9B24C53EF700ADFD8A /* SimpleVideoAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A874BB024C53EF800ADFD8A /* Build configuration list for PBXNativeTarget "SimpleVideoAnimation" */;
+			buildPhases = (
+				F6586DA6B62A1C6F6FBAC023 /* [CP] Check Pods Manifest.lock */,
+				6A874B9824C53EF700ADFD8A /* Sources */,
+				6A874B9924C53EF700ADFD8A /* Frameworks */,
+				6A874B9A24C53EF700ADFD8A /* Resources */,
+				D3C3047B9CCE5998654663D7 /* [CP] Embed Pods Frameworks */,
+				6A874BBB24C5462C00ADFD8A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleVideoAnimation;
+			productName = SimpleVideoAnimation;
+			productReference = 6A874B9C24C53EF700ADFD8A /* SimpleVideoAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A874B9424C53EF700ADFD8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "RenZhu Macro";
+				TargetAttributes = {
+					6A874B9B24C53EF700ADFD8A = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 6A874B9724C53EF700ADFD8A /* Build configuration list for PBXProject "SimpleVideoAnimation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6A874B9324C53EF700ADFD8A;
+			productRefGroup = 6A874B9D24C53EF700ADFD8A /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6A874BB424C545CC00ADFD8A /* Products */;
+					ProjectRef = 6A874BB324C545CC00ADFD8A /* MetalVideoProcess.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				6A874B9B24C53EF700ADFD8A /* SimpleVideoAnimation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6A874BB824C545CC00ADFD8A /* MetalVideoProcess.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MetalVideoProcess.framework;
+			remoteRef = 6A874BB724C545CC00ADFD8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A874B9A24C53EF700ADFD8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A874BAC24C53EF800ADFD8A /* LaunchScreen.storyboard in Resources */,
+				6A874BA924C53EF800ADFD8A /* Assets.xcassets in Resources */,
+				6A874BDA24C6FDE200ADFD8A /* 853.mp4 in Resources */,
+				6A54C20024C7DE9200EF216E /* cute.mp4 in Resources */,
+				6A874BA724C53EF700ADFD8A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D3C3047B9CCE5998654663D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleVideoAnimation/Pods-SimpleVideoAnimation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleVideoAnimation/Pods-SimpleVideoAnimation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleVideoAnimation/Pods-SimpleVideoAnimation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6586DA6B62A1C6F6FBAC023 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleVideoAnimation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A874B9824C53EF700ADFD8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A874BA424C53EF700ADFD8A /* ViewController.swift in Sources */,
+				6A874BA024C53EF700ADFD8A /* AppDelegate.swift in Sources */,
+				6A874BA224C53EF700ADFD8A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6A874BA524C53EF700ADFD8A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A874BA624C53EF700ADFD8A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6A874BAA24C53EF800ADFD8A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A874BAB24C53EF800ADFD8A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6A874BAE24C53EF800ADFD8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6A874BAF24C53EF800ADFD8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6A874BB124C53EF800ADFD8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D107CF0887B69DDEA376CBEA /* Pods-SimpleVideoAnimation.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RYRPKMVKDL;
+				INFOPLIST_FILE = SimpleVideoAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangrenzhu.SimpleVideoAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6A874BB224C53EF800ADFD8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A512CD4DD2F5AB414CF01FE6 /* Pods-SimpleVideoAnimation.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RYRPKMVKDL;
+				INFOPLIST_FILE = SimpleVideoAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangrenzhu.SimpleVideoAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A874B9724C53EF700ADFD8A /* Build configuration list for PBXProject "SimpleVideoAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A874BAE24C53EF800ADFD8A /* Debug */,
+				6A874BAF24C53EF800ADFD8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A874BB024C53EF800ADFD8A /* Build configuration list for PBXNativeTarget "SimpleVideoAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A874BB124C53EF800ADFD8A /* Debug */,
+				6A874BB224C53EF800ADFD8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6A874B9424C53EF700ADFD8A /* Project object */;
+}

@@ -116,11 +116,7 @@ open class MetalVideoProcessOperation: ImageProcessingOperation {
         if rs == false {
             updateTargetsWithTexture(texture, trackID: trackID)
             return
-        } else {
-            let distance = CMTime(seconds: texture.frameTime, preferredTimescale: 1000) - self.timelineRange.start
-            let progress = distance.seconds / self.timelineRange.duration.seconds
-            self.uniformSettings.progress = Float(progress)
-        }
+        } 
         
         self.uniformSettings.iGlobalTime = Float(texture.frameTime)
         

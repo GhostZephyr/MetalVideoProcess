@@ -1,0 +1,16 @@
+PODS:
+  - PryntTrimmerView (4.0.0)
+
+DEPENDENCIES:
+  - PryntTrimmerView
+
+SPEC REPOS:
+  trunk:
+    - PryntTrimmerView
+
+SPEC CHECKSUMS:
+  PryntTrimmerView: 67e67573ffd4c073f1308effa66aefd0cfa667a0
+
+PODFILE CHECKSUM: 4473f02a1528566660f9c5ed79ea1d9d7df2096d
+
+COCOAPODS: 1.8.4

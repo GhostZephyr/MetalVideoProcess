@@ -43,15 +43,14 @@ let asset1 = AVAsset(url: Bundle.main.url(forResource: "test", withExtension: "m
 let item1 = MetalVideoEditorItem(asset: asset1)
 
 do {
-	let editor = try MetalVideoEditor(videoItems: [item1])
-	let playerItem = editor.buildPlayerItem()
-	let player = try MetalVideoProcessPlayer(playerItem: playerItem)
-            
-	let beautyFilter1 = MetalVideoProcessBeautyFilter()
-  player -- > beautyFilter1 --> renderView
-	self.player = player
-	self.player?.playerDelegate = self
-          
+    let editor = try MetalVideoEditor(videoItems: [item1])
+    let playerItem = editor.buildPlayerItem()
+    let player = try MetalVideoProcessPlayer(playerItem: playerItem)
+
+    let beautyFilter1 = MetalVideoProcessBeautyFilter()
+    player -- > beautyFilter1 --> renderView
+    self.player = player
+    self.player?.playerDelegate = self
 } catch {
 	debugPrint("init error")
 }

@@ -8,6 +8,94 @@
 
 import Foundation
 
+public enum TimingFunctionType {
+    case linearInterpolation
+    case quadraticEaseIn
+    case quadraticEaseOut
+    case quadraticEaseInOut
+    case cubicEaseIn
+    case cubicEaseOut
+    case cubicEaseInOut
+    case quarticEaseIn
+    case quarticEaseOut
+    case quarticEaseInOut
+    case SineEaseIn
+    case SineEaseOut
+    case circularEaseIn
+    case circularEaseOut
+    case exponentialEaseIn
+    case exponentialEaseOut
+    case elasticEaseIn
+    case elasticEaseOut
+    case elasticEaseInOut
+    case backEaseIn
+    case backEaseOut
+    case backEaseInOut
+    case bounceEaseIn
+    case bounceEaseOut
+    case bounceEaseInOut
+    case bounceTwice
+    
+    func timingValue(p: Float) -> Float {
+        switch self {
+        case .linearInterpolation:
+            return TimingFunctionFactory.linearInterpolation(p: p)
+        case .quadraticEaseIn:
+            return TimingFunctionFactory.quadraticEaseIn(p: p)
+        case .quadraticEaseOut:
+            return TimingFunctionFactory.quadraticEaseOut(p: p)
+        case .quadraticEaseInOut:
+            return TimingFunctionFactory.quadraticEaseInOut(p: p)
+        case .cubicEaseIn:
+            return TimingFunctionFactory.cubicEaseIn(p: p)
+        case .cubicEaseOut:
+            return TimingFunctionFactory.cubicEaseOut(p: p)
+        case .cubicEaseInOut:
+            return TimingFunctionFactory.cubicEaseInOut(p: p)
+        case .quarticEaseIn:
+            return TimingFunctionFactory.quarticEaseIn(p: p)
+        case .quarticEaseOut:
+            return TimingFunctionFactory.quarticEaseOut(p: p)
+        case .quarticEaseInOut:
+            return TimingFunctionFactory.quarticEaseInOut(p: p)
+        case .SineEaseIn:
+            return TimingFunctionFactory.SineEaseIn(p: p)
+        case .SineEaseOut:
+            return TimingFunctionFactory.SineEaseOut(p: p)
+        case .circularEaseIn:
+            return TimingFunctionFactory.circularEaseIn(p: p)
+        case .circularEaseOut:
+            return TimingFunctionFactory.circularEaseOut(p: p)
+        case .exponentialEaseIn:
+            return TimingFunctionFactory.exponentialEaseIn(p: p)
+        case .exponentialEaseOut:
+            return TimingFunctionFactory.exponentialEaseOut(p: p)
+        case .elasticEaseIn:
+            return TimingFunctionFactory.elasticEaseIn(p: p)
+        case .elasticEaseOut:
+            return TimingFunctionFactory.elasticEaseOut(p: p)
+        case .elasticEaseInOut:
+            return TimingFunctionFactory.elasticEaseInOut(p: p)
+        case .backEaseIn:
+            return TimingFunctionFactory.backEaseIn(p: p)
+        case .backEaseOut:
+            return TimingFunctionFactory.backEaseOut(p: p)
+        case .backEaseInOut:
+            return TimingFunctionFactory.backEaseInOut(p: p)
+        case .bounceEaseIn:
+            return TimingFunctionFactory.bounceEaseIn(p: p)
+        case .bounceEaseOut:
+            return TimingFunctionFactory.bounceEaseOut(p: p)
+        case .bounceEaseInOut:
+            return TimingFunctionFactory.bounceEaseInOut(p: p)
+        case .bounceTwice:
+            return TimingFunctionFactory.bounceTwice(p: p)
+        }
+    }
+    
+
+}
+
 public class TimingFunctionFactory {
     // Modeled after the line y = x
     static public func linearInterpolation(p: Float) -> Float {
