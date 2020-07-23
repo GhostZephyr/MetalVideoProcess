@@ -9,7 +9,7 @@
 import AVFoundation
 
 public class MetalVideoProcessMotion: MetalVideoProcessOperation {
-
+    
     public var factor: Float = 1.0 { didSet { uniformSettings["factor"] = factor } }
     
     public var timingType: TimingFunctionType = .linearInterpolation

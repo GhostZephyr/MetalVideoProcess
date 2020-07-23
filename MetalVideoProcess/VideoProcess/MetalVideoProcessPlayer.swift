@@ -35,30 +35,35 @@ public class MetalVideoProcessPlayer: ImageSource {
     public var trackID: Int32 = 0
     
     deinit {
-        debugPrint("MetalMoviePlayer deinit: ", self.trackTargets)
+        debugPrint("##################MetalMoviePlayer deinit: ", self.trackTargets)
         self.trackTargets.removeAll()
         self.requestCache.removeAll()
     }
     
     public func dispose() {
-        self.audioEncodingTarget?.renderVideoFramesemaphore.signal()
-        self.audioEncodingTarget?.writeVideoFramesemaphore.signal()
-        self.exportVideoFramesemaphore.signal()
-        self.renderVideoFramesemaphore.signal()
+        self.suspend()
+        videoFrameProcessingQueue.sync { [weak self] in
+            guard let `self` = self else { return }
+            self.audioEncodingTarget?.renderVideoFramesemaphore.signal()
+            self.audioEncodingTarget?.writeVideoFramesemaphore.signal()
+            self.exportVideoFramesemaphore.signal()
+            self.renderVideoFramesemaphore.signal()
+            
+            self.trackTargets.removeAll()
+            self.requestCache.removeAll()
+            self.player.pause()
+            self.exportCompositor?.delegate = nil
+            self.playbackCompositor?.delegate = nil
+            self.playbackDisplayLink?.isPaused = true
+            self.playbackDisplayLink?.invalidate()
+            self.playbackDisplayLink = nil
+            self.playerDelegate = nil
+            self.audioEncodingTarget = nil
+            currentRequest = nil
+            self.removeAllTargets()
+            NotificationCenter.default.removeObserver(self)
+        }
         
-        self.trackTargets.removeAll()
-        self.requestCache.removeAll()
-        self.player.pause()
-        self.exportCompositor?.delegate = nil
-        self.playbackCompositor?.delegate = nil
-        self.playbackDisplayLink?.isPaused = true
-        self.playbackDisplayLink?.invalidate()
-        self.playbackDisplayLink = nil
-        self.playerDelegate = nil
-        self.audioEncodingTarget = nil
-        currentRequest = nil
-        self.removeAllTargets()
-        NotificationCenter.default.removeObserver(self)
     }
     
     
@@ -526,6 +531,9 @@ public class MetalVideoProcessPlayer: ImageSource {
     
     public func suspend() {
         self.playbackDisplayLink?.isPaused = true
+        self.videoFrameProcessingQueue.sync {
+            debugPrint("suspend ###################")
+        }
     }
     
     public func resume() {
@@ -561,50 +569,49 @@ public class MetalVideoProcessPlayer: ImageSource {
             outputItemTime = self.videoOutput.itemTime(forHostTime: nextVSync)
             
             if self.videoOutput.hasNewPixelBuffer(forItemTime: outputItemTime) {
-                autoreleasepool { [weak self] in
-                    guard let `self` = self else  { return }
-                    guard let _ = self.videoOutput.copyPixelBuffer(forItemTime: outputItemTime,
-                                                                   itemTimeForDisplay: &newTime)
-                        else {
+                guard let _ = self.videoOutput.copyPixelBuffer(forItemTime: outputItemTime,
+                                                               itemTimeForDisplay: &newTime)
+                    else {
+                        return
+                }
+                self.requestOutputTime = newTime
+                if self.isPlaying {
+                    debugPrint("prepare rendering: ", newTime.seconds)
+                    guard let request = self.requestCache.getRequest(time: newTime) else {
+                        self.requestCache.clearCacheWithTime(newTime)
+                        return
+                    }
+                    
+                    self.currentRequest = request
+                    
+                    autoreleasepool {
+                        self.process(request: request, newTime: newTime)
+                    }
+                    self.requestCache.removeRequest(time: newTime)
+                } else {
+                    autoreleasepool {
+                        guard let request = self.currentRequest else {
                             return
-                    }
-                    self.requestOutputTime = newTime
-                    if self.isPlaying {
-                        debugPrint("prepare rendering: ", newTime.seconds)
-                        guard let request = self.requestCache.getRequest(time: newTime) else {
-                            self.requestCache.clearCacheWithTime(newTime)
-                            return
                         }
-                        
-                        self.currentRequest = request
-                        
-                        autoreleasepool {
-                            self.process(request: request, newTime: newTime)
-                        }                      
-                        self.requestCache.removeRequest(time: newTime)
-                    } else {
-                        autoreleasepool {
-                            guard let request = self.currentRequest else {
-                                return
-                            }
-                            self.process(request: request, newTime: request.compositionTime)
-                        }
+                        self.process(request: request, newTime: request.compositionTime)
                     }
-                    if newTime != self.currentFrame {
-                        self.currentFrame = newTime
-                        if self.playerDelegate != nil {
-                            self.playerDelegate?.playbackFrameTimeChanged(frameTime: self.currentFrame, player: self.player)
-                        }
+                }
+                if sender.isPaused {
+                    self.pause()
+                    return
+                }
+                if newTime != self.currentFrame {
+                    self.currentFrame = newTime
+                    if self.playerDelegate != nil {
+                        self.playerDelegate?.playbackFrameTimeChanged(frameTime: self.currentFrame, player: self.player)
                     }
-                    //这里不做任何操作，仅代表目前正在seek
                 }
             } else {
                 
-                autoreleasepool { [weak self] in
-                    guard let `self` = self else { return }
-                    guard let request = self.currentRequest else {
-                        return
-                    }
+                guard let request = self.currentRequest else {
+                    return
+                }
+                autoreleasepool {
                     self.process(request: request, newTime: request.compositionTime)
                 }
                 if !self.isPlaying {
@@ -622,7 +629,9 @@ public class MetalVideoProcessPlayer: ImageSource {
     }
     
     func process(request: AVAsynchronousVideoCompositionRequest, newTime: CMTime) {
-        
+        if self.playbackDisplayLink?.isPaused ?? true {
+            return 
+        }
         guard let instructions = request.videoCompositionInstruction as? VideoCompositionInstruction else {
             return
         }

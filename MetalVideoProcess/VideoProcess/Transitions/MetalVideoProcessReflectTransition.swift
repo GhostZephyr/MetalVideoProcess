@@ -12,6 +12,6 @@ public class MetalVideoProcessReflectTransition: MetalVideoProcessTransition {
 
     public init() {
         super.init(fragmentFunctionName: "reflectTransition", numberOfInputs: 2, device: sharedMetalRenderingDevice)
-        self.timingType = .quadraticEaseOut
+        self.timingType = .linearInterpolation
     }
 }

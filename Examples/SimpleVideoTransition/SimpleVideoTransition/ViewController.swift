@@ -23,7 +23,17 @@ class ViewController: UIViewController {
     
     var grayFilter: MetalVideoProcessLuminance?
     
+    public var transition: MetalVideoProcessTransition? = MetalVideoProcessFadeTransition()
+    deinit {
+    
+        print(" ViewController deinit")
+        
+    }
+    
     override func viewDidLoad() {
+        guard let transition = self.transition else {
+            return
+        }
         super.viewDidLoad()
         let asset1 = AVAsset(url: Bundle.main.url(forResource: "853", withExtension: "mp4")!)
         let asset2 = AVAsset(url: Bundle.main.url(forResource: "cute", withExtension: "mp4")!)
@@ -34,6 +44,8 @@ class ViewController: UIViewController {
         let transitionDuration = CMTime.init(seconds: 2.0, preferredTimescale: 600)
         item1.videoTransition = TransitionDuration(duration: transitionDuration)
         item1.audioTransition = FadeInOutAudioTransition(duration: transitionDuration)
+        
+        
         do {
             let editor = try MetalVideoEditor(videoItems: [item1, item2],
                                               customVideoCompositorClass: MetalVideoProcessCompositor.self)
@@ -41,59 +53,36 @@ class ViewController: UIViewController {
             let playerItem = editor.buildPlayerItem()
             self.progress.maximumValue = Float(playerItem.duration.seconds)
             let player = try MetalVideoProcessPlayer(playerItem: playerItem)
-            
-            let beautyFilter1 = MetalVideoProcessBeautyFilter()
-            beautyFilter1.saveUniformSettings(forTimelineRange: item1.timeRange, trackID: item1.trackID)
-            beautyFilter1.isEnable = false
-            
-            let beautyFilter2 = MetalVideoProcessBeautyFilter()
-            beautyFilter2.saveUniformSettings(forTimelineRange: item2.timeRange, trackID: item2.trackID)
-            beautyFilter2.isEnable = false
-            
-            let blurFilter1 = MetalVideoProcessGaussianBlurFilter()
-            blurFilter1.saveUniformSettings(forTimelineRange: item1.timeRange, trackID: item1.trackID)
-            blurFilter1.isEnable = false
-            
-            let blurFilter2 = MetalVideoProcessGaussianBlurFilter()
-            blurFilter2.saveUniformSettings(forTimelineRange: item2.timeRange, trackID: item2.trackID)
-            blurFilter2.isEnable = false
-            
-            let gray = MetalVideoProcessLuminance()
-            gray.isEnable = false
-            self.grayFilter = gray
-            
-            self.beauty1 = beautyFilter1
-            self.beauty2 = beautyFilter2
-            
-            self.blur1 = blurFilter1
-            self.blur2 = blurFilter2
-            
             let transitionTimeRange = item1.timeRange.intersection(item2.timeRange)
-            let fadeTransition = MetalVideoProcessFadeTransition()
+            
             
             //注意顺序 第一个视频在前 第二视频在后
-            fadeTransition.mainTrackIDs.append(item1.trackID)
-            fadeTransition.mainTrackIDs.append(item2.trackID)
+            transition.mainTrackIDs.append(item1.trackID)
+            transition.mainTrackIDs.append(item2.trackID)
             
             //告知转场的时间 通过item1和item2的intersection计算
-            fadeTransition.saveUniformSettings(forTimelineRange: transitionTimeRange, trackID: 0)
-            item1.transitoin = fadeTransition
+            transition.saveUniformSettings(forTimelineRange: transitionTimeRange, trackID: 0)
+            item1.transitoin = transition
             
             //Begin build pipeline
-            player.addTarget(beautyFilter1, atTargetIndex: nil, trackID: item1.trackID, targetTrackId: 0)
-            player.addTarget(beautyFilter2, atTargetIndex: nil, trackID: item2.trackID, targetTrackId: item2.trackID)
-            //mapping trackId on mainTrack 0
-            
-            beautyFilter1 --> blurFilter1 --> fadeTransition
-            beautyFilter2 --> blurFilter2 --> fadeTransition --> gray --> renderView
-            //Done
-                     
+            player.addTarget(transition, atTargetIndex: nil, trackID: item1.trackID, targetTrackId: 0)
+            player.addTarget(transition, atTargetIndex: nil, trackID: item2.trackID, targetTrackId: item2.trackID)
+           
+           transition --> renderView
+           
             self.player = player
             self.player?.playerDelegate = self
-            
+            self.player?.play()
         } catch {
             debugPrint("init error")
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+//        player?.suspend()
+        player?.dispose()
+//        player?.removeAllTargets()
+//        player = nil
     }
     
     @IBAction func play(_ sender: Any) {

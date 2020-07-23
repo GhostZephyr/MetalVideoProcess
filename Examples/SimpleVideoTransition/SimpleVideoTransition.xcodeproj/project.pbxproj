@@ -17,6 +17,7 @@
 		6ADB07A924ADDE450010A817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ADB07A724ADDE450010A817 /* Main.storyboard */; };
 		6ADB07AB24ADDE460010A817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ADB07AA24ADDE460010A817 /* Assets.xcassets */; };
 		6ADB07AE24ADDE460010A817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ADB07AC24ADDE460010A817 /* LaunchScreen.storyboard */; };
+		AB59B8CC24C5AC8000943BE2 /* NaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59B8CA24C5AC8000943BE2 /* NaviViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		6ADB07AA24ADDE460010A817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6ADB07AD24ADDE460010A817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6ADB07AF24ADDE460010A817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB59B8CA24C5AC8000943BE2 /* NaviViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				6A3E708C24C067C3009A0AC9 /* 853.mp4 */,
 				6A3E708E24C067C3009A0AC9 /* cute.mp4 */,
+				AB59B8CA24C5AC8000943BE2 /* NaviViewController.swift */,
 				6ADB07A124ADDE450010A817 /* AppDelegate.swift */,
 				6ADB07A324ADDE450010A817 /* SceneDelegate.swift */,
 				6ADB07A524ADDE450010A817 /* ViewController.swift */,
@@ -146,7 +149,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "RenZhu Macro";
 				TargetAttributes = {
 					6ADB079D24ADDE450010A817 = {
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB59B8CC24C5AC8000943BE2 /* NaviViewController.swift in Sources */,
 				6ADB07A624ADDE450010A817 /* ViewController.swift in Sources */,
 				6ADB07A224ADDE450010A817 /* AppDelegate.swift in Sources */,
 				6ADB07A424ADDE450010A817 /* SceneDelegate.swift in Sources */,
@@ -262,6 +266,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -322,6 +327,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

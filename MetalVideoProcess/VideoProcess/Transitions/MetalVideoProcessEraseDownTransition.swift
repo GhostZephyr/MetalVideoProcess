@@ -10,9 +10,8 @@ import AVFoundation
 ///向下擦除转场
 public class MetalVideoProcessEraseDownTransition: MetalVideoProcessTransition {
 
-    public init() {
+    required public init() {
         super.init(fragmentFunctionName: "eraseDownTransition", numberOfInputs: 2, device: sharedMetalRenderingDevice)
         self.timingType = .quadraticEaseOut
     }
-   
 }

@@ -10,8 +10,10 @@ import AVFoundation
 ///镜像翻转转场
 public class MetalVideoProcessMirrorRotateTransition: MetalVideoProcessTransition {
 
-    public init() {
+    required public init() {
         super.init(fragmentFunctionName: "mirrorRotateTransition", numberOfInputs: 2, device: sharedMetalRenderingDevice)
-        self.timingType = .quadraticEaseOut
+
+        self.timingType = .linearInterpolation
+
     }
 }

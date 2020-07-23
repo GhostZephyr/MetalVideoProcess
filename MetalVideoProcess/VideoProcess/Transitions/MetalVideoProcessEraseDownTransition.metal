@@ -29,7 +29,7 @@ fragment half4 eraseDownTransition(TwoInputVertexIO fragmentInput [[stage_in]],
     half4 input1 = inputTexture2.sample(quadSampler, uv);
     float process = uniform.tweenFactor;
     
-//    float curve0 = process * process;
-//    float curve1 = 3. * curve0 - 2. * curve0 * process;
+    float curve0 = process * process;
+    float curve1 = 3. * curve0 - 2. * curve0 * process;
     return mix(input0, input1, step(uv.y, process));
 }
