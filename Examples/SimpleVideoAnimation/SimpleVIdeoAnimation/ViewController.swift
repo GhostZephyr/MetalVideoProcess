@@ -13,13 +13,14 @@ import PryntTrimmerView
 
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var renderView: MetalVideoProcessRenderView!
     
     @IBOutlet weak var progressView: TrimmerView!
     
     var player: MetalVideoProcessPlayer?
     var editor: MetalVideoEditor?
+    public var motionIn: MetalVideoProcessMotion = MetalVideoProcessMoveInMotion()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,32 +33,37 @@ class ViewController: UIViewController {
             self.editor = editor
             let playerItem = editor.buildPlayerItem()
             
-            let fadeIn = MetalVideoProcessFadeInMotion()
+            let fadeIn = motionIn
             fadeIn.timingType = .quadraticEaseOut
             
-            let fadeInTimeRange = CMTimeRangeMake(start: CMTime(seconds: 2.0), duration: CMTime(seconds: 2.0))
+            let fadeOut = MetalVideoProcessFadeOutMotion()
+            fadeOut.timingType = .quarticEaseOut
+ 
+            let fadeInTimeRange = CMTimeRangeMake(start: CMTime(seconds: 0.0), duration: CMTime(seconds: 2.0))
             fadeIn.saveUniformSettings(forTimelineRange: fadeInTimeRange, trackID: item1.trackID)
             
+            let fadeOutTimeRange = CMTimeRange(start: item1.timeRange.end - CMTime(seconds: 4.0), duration: CMTime(seconds: 1.5))
+            fadeOut.saveUniformSettings(forTimelineRange: fadeOutTimeRange, trackID: item1.trackID)
+ 
             let player = try MetalVideoProcessPlayer(playerItem: playerItem)
             player.playerDelegate = self
             
             let background = MetalVideoProcessBackground(trackID: 0)
             background.aspectRatioType = .Ratio9_16
             background.canvasSizeType = .Type720p
-            background.setBackgroundType(type: .Black)
+            background.setBackgroundType(type: .Blur)
             
             let transform = MetalVideoProcessTransformFilter()
                        transform.saveUniformSettings(forTimelineRange: item1.timeRange, trackID: item1.trackID)
-            transform.roi = CGRect(x: 0.25, y: 0.25, width: 0.5, height: 0.5)
-            
+            transform.roi = CGRect(x: 0.5, y: 0.5, width: 0.5, height: 0.5)
+            fadeIn.roi = transform.roi
             player.addTarget(background, atTargetIndex: 0, trackID: item1.trackID, targetTrackId: 0)
-            
-            
+             
             background --> fadeIn //source 0
             player.addTarget(transform, atTargetIndex: nil, trackID: item1.trackID, targetTrackId: 0) //source 1
             
-            transform --> fadeIn --> renderView//source 1
-            
+            transform --> fadeIn --> renderView //source 1
+
             self.player = player
         } catch {
             
@@ -72,6 +78,11 @@ class ViewController: UIViewController {
         }
         self.progressView.asset = asset
         self.progressView.delegate = self
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.player?.suspend()
+        self.player?.dispose()
     }
     
     @IBAction func play(_ sender: Any) {
