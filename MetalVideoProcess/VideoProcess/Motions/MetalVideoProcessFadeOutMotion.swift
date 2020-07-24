@@ -14,18 +14,17 @@ public class MetalVideoProcessFadeOutMotion: MetalVideoProcessMotion {
         super.init(fragmentFunctionName: "fadeOutMotion", numberOfInputs: 2, device: sharedMetalRenderingDevice)
         self.timingType = .quadraticEaseOut
     }
-    
+//    
     public override func newTextureAvailable(_ texture: Texture, fromSourceIndex: UInt, trackID: Int32) {
-        if let time = texture.timingStyle.timestamp?.asCMTime {
-            if time > timelineRange.end {
-                factor = 1.0
-            } else if time < timelineRange.start {
-                self.updateTargetsWithTexture(texture, trackID: trackID)
-                return
-            }
-            debugPrint("fadeout:", factor, " frameTime:", texture.frameTime)
+//        if let time = texture.timingStyle.timestamp?.asCMTime {
+//            if time > timelineRange.end {
+//                factor = 1.0
+//            }
+//
+//
+//            debugPrint("fadeout:", factor, " frameTime:", texture.frameTime)
             super.newTextureAvailable(texture, fromSourceIndex: fromSourceIndex, trackID: trackID)
-        }
+//        }
     }
     
     /// after fade out, we need the texture alpha keep to zero

@@ -17,8 +17,10 @@ public class MetalVideoProcessTransformFilter: MetalVideoProcessOperation  {
    
     public var roi: CGRect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0) {
         didSet {
-            self.translation =  Position(Float(roi.origin.x * 2.0 + roi.size.width) - 1.0, Float(roi.origin.y * 2.0 + roi.size.height) - 1.0)
-            self.scale = Position(Float(roi.size.width), Float(roi.size.height))
+            
+            let roiAdjusted = CGRect(x: roi.origin.x, y: 1.0 - roi.origin.y, width: roi.width, height: roi.height)
+            self.translation =  Position(Float(roiAdjusted.origin.x * 2.0 + roiAdjusted.size.width) - 1.0, Float(roiAdjusted.origin.y * 2.0 - roiAdjusted.size.height) - 1.0)
+            self.scale = Position(Float(roiAdjusted.size.width), Float(roiAdjusted.size.height))
         }
     }
     

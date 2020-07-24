@@ -35,37 +35,29 @@ class ViewController: UIViewController {
             let fadeIn = MetalVideoProcessFadeInMotion()
             fadeIn.timingType = .quadraticEaseOut
             
-            let fadeOut = MetalVideoProcessFadeOutMotion()
-            fadeOut.timingType = .quarticEaseOut
- 
             let fadeInTimeRange = CMTimeRangeMake(start: CMTime(seconds: 2.0), duration: CMTime(seconds: 2.0))
             fadeIn.saveUniformSettings(forTimelineRange: fadeInTimeRange, trackID: item1.trackID)
             
-            let fadeOutTimeRange = CMTimeRange(start: item1.timeRange.end - CMTime(seconds: 4.0), duration: CMTime(seconds: 1.5))
-            fadeOut.saveUniformSettings(forTimelineRange: fadeOutTimeRange, trackID: item1.trackID)
- 
             let player = try MetalVideoProcessPlayer(playerItem: playerItem)
             player.playerDelegate = self
             
             let background = MetalVideoProcessBackground(trackID: 0)
             background.aspectRatioType = .Ratio9_16
             background.canvasSizeType = .Type720p
-            background.setBackgroundType(type: .Blur)
+            background.setBackgroundType(type: .Black)
             
             let transform = MetalVideoProcessTransformFilter()
                        transform.saveUniformSettings(forTimelineRange: item1.timeRange, trackID: item1.trackID)
             transform.roi = CGRect(x: 0.25, y: 0.25, width: 0.5, height: 0.5)
             
             player.addTarget(background, atTargetIndex: 0, trackID: item1.trackID, targetTrackId: 0)
-             
+            
+            
             background --> fadeIn //source 0
             player.addTarget(transform, atTargetIndex: nil, trackID: item1.trackID, targetTrackId: 0) //source 1
             
-            transform --> fadeIn //source 1
+            transform --> fadeIn --> renderView//source 1
             
-            background --> fadeOut //source 0
-            fadeIn --> fadeOut --> renderView //source 1
-
             self.player = player
         } catch {
             

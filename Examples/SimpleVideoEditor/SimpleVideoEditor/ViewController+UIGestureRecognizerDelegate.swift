@@ -58,7 +58,7 @@ extension ViewController: UIGestureRecognizerDelegate {
             let tanl = ges.translation(in: ges.view)
             
             // have to content the view scaleFactor and the vertex to texture scale.
-            transformFilter.translation = Position(currentPostion.x + Float(tanl.x * self.renderView.contentScaleFactor * 2.0) / Float(self.renderView.drawableSize.width), currentPostion.y - Float(tanl.y * self.renderView.contentScaleFactor * 2.0) / Float(self.renderView.drawableSize.height))
+            transformFilter.translation = Position(currentPostion.x + Float(tanl.x * self.renderView.contentScaleFactor * 2.0) / Float(self.renderView.drawableSize.width), 1.0 - currentPostion.y - Float(tanl.y * self.renderView.contentScaleFactor * 2.0) / Float(self.renderView.drawableSize.height))
             
         } else if ges.state == .ended {
             currentPostion = (transformFilter.translation)

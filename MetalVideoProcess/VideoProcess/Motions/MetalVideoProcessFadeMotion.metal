@@ -13,6 +13,7 @@ using namespace metal;
 typedef struct
 {
     float factor;
+    float4 roi;
 } MotionUniform;
 
 fragment half4 fadeInMotion(TwoInputVertexIO fragmentInput [[stage_in]],

@@ -18,6 +18,7 @@
 		6A874BB924C5462C00ADFD8A /* MetalVideoProcess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A874BB824C545CC00ADFD8A /* MetalVideoProcess.framework */; };
 		6A874BBA24C5462C00ADFD8A /* MetalVideoProcess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A874BB824C545CC00ADFD8A /* MetalVideoProcess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A874BDA24C6FDE200ADFD8A /* 853.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6A874BD824C6FDE200ADFD8A /* 853.mp4 */; };
+		AB59B95124C9717600943BE2 /* NavigateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59B94F24C9717600943BE2 /* NavigateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		6A874BB324C545CC00ADFD8A /* MetalVideoProcess.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MetalVideoProcess.xcodeproj; path = ../../MetalVideoProcess.xcodeproj; sourceTree = "<group>"; };
 		6A874BD824C6FDE200ADFD8A /* 853.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 853.mp4; path = SimpleVIdeoAnimation/853.mp4; sourceTree = SOURCE_ROOT; };
 		A512CD4DD2F5AB414CF01FE6 /* Pods-SimpleVideoAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleVideoAnimation.release.xcconfig"; path = "Target Support Files/Pods-SimpleVideoAnimation/Pods-SimpleVideoAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		AB59B94F24C9717600943BE2 /* NavigateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigateViewController.swift; path = SimpleVIdeoAnimation/NavigateViewController.swift; sourceTree = SOURCE_ROOT; };
 		D107CF0887B69DDEA376CBEA /* Pods-SimpleVideoAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleVideoAnimation.debug.xcconfig"; path = "Target Support Files/Pods-SimpleVideoAnimation/Pods-SimpleVideoAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 				6A874B9F24C53EF700ADFD8A /* AppDelegate.swift */,
 				6A874BA124C53EF700ADFD8A /* SceneDelegate.swift */,
 				6A874BA324C53EF700ADFD8A /* ViewController.swift */,
+				AB59B94F24C9717600943BE2 /* NavigateViewController.swift */,
 				6A874BA524C53EF700ADFD8A /* Main.storyboard */,
 				6A874BA824C53EF800ADFD8A /* Assets.xcassets */,
 				6A874BAA24C53EF800ADFD8A /* LaunchScreen.storyboard */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A874BA424C53EF700ADFD8A /* ViewController.swift in Sources */,
+				AB59B95124C9717600943BE2 /* NavigateViewController.swift in Sources */,
 				6A874BA024C53EF700ADFD8A /* AppDelegate.swift in Sources */,
 				6A874BA224C53EF700ADFD8A /* SceneDelegate.swift in Sources */,
 			);

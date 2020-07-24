@@ -210,8 +210,9 @@ public class ShaderUniformSettings {
         shaderUniformSettingsQueue.sync {
             guard (uniformValues.count > 0) else { return }
             
+            let cont: Int = ((uniformValues.count + 3) / 4) * 4//Int(ceil(Double(uniformValues.count) / 4.0)) * 4
             let uniformBuffer = self.currentDevice.device.makeBuffer(bytes: uniformValues,
-                                                                     length: uniformValues.count * MemoryLayout<Float>.size,
+                                                                     length: cont * MemoryLayout<Float>.size,
                                                                      options: [])!
             
             let iGlobalTimeBuffer = self.currentDevice.device.makeBuffer(bytes: &self.iGlobalTime, length: MemoryLayout<Float>.size, options: MTLResourceOptions.storageModeShared)!
