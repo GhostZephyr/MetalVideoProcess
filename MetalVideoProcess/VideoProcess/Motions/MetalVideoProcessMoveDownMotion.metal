@@ -1,5 +1,5 @@
 //
-//  rotateMotion.metal
+//  moveDownMotion.metal
 //  MetalVideoProcess
 //
 //  Created by Ruanshengqiang Macro on 2020/7/21.
@@ -10,14 +10,14 @@
 using namespace metal;
 #include "../../Vender/Render/Base/OperationShaderTypes.h"
 
-namespace moveUpMotion {
+namespace moveDownMotion {
     typedef struct
     {
         float factor;
         float4 roi;
     } MotionUniform;
     
-    fragment half4 moveUpMotion(TwoInputVertexIO fragmentInput [[stage_in]],
+    fragment half4 moveDownMotion(TwoInputVertexIO fragmentInput [[stage_in]],
                                 texture2d<half> inputTexture [[texture(0)]],
                                 texture2d<half> inputTexture2 [[texture(1)]],
                                 constant MotionUniform& uniform [[ buffer(1) ]])

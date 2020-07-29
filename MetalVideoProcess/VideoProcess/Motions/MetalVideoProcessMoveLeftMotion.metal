@@ -10,14 +10,14 @@
 using namespace metal;
 #include "../../Vender/Render/Base/OperationShaderTypes.h"
 
-namespace moveUpMotion {
+namespace moveLeftMotion {
     typedef struct
     {
         float factor;
         float4 roi;
     } MotionUniform;
     
-    fragment half4 moveUpMotion(TwoInputVertexIO fragmentInput [[stage_in]],
+    fragment half4 moveLeftMotion(TwoInputVertexIO fragmentInput [[stage_in]],
                                 texture2d<half> inputTexture [[texture(0)]],
                                 texture2d<half> inputTexture2 [[texture(1)]],
                                 constant MotionUniform& uniform [[ buffer(1) ]])
@@ -29,7 +29,7 @@ namespace moveUpMotion {
         
         float2 uv = fragmentInput.textureCoordinate2;
         
-        half4 fgCol = inputTexture2.sample(quadSampler, uv - float2(0.0, uniform.roi.a) + float2(0.0, uniform.roi.a * uniform.factor));
+        half4 fgCol = inputTexture2.sample(quadSampler, uv - float2(uniform.roi.b, 0.0) + float2(uniform.roi.b * uniform.factor, 0.0));
         
         return half4(mix(bgCol.rgb, fgCol.rgb, fgCol.a), fgCol.a);
     }

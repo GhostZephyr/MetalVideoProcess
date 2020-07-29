@@ -10,26 +10,36 @@
 using namespace metal;
 #include "../../Vender/Render/Base/OperationShaderTypes.h"
 
-namespace moveUpMotion {
+namespace rotateInRightMotion {
     typedef struct
     {
         float factor;
         float4 roi;
+        float2 iResolution;
+        
     } MotionUniform;
     
-    fragment half4 moveUpMotion(TwoInputVertexIO fragmentInput [[stage_in]],
+    fragment half4 rotateInRightMotion(TwoInputVertexIO fragmentInput [[stage_in]],
                                 texture2d<half> inputTexture [[texture(0)]],
                                 texture2d<half> inputTexture2 [[texture(1)]],
                                 constant MotionUniform& uniform [[ buffer(1) ]])
     {
         
         constexpr sampler quadSampler(mip_filter::linear, min_filter::linear, mag_filter::linear, address::clamp_to_zero);
-       
+        float2 center = float2(uniform.roi.r + uniform.roi.b * 0.5, uniform.roi.g + uniform.roi.a * 0.5);
+        
         half4 bgCol = inputTexture.sample(quadSampler, fragmentInput.textureCoordinate);
         
         float2 uv = fragmentInput.textureCoordinate2;
         
-        half4 fgCol = inputTexture2.sample(quadSampler, uv - float2(0.0, uniform.roi.a) + float2(0.0, uniform.roi.a * uniform.factor));
+        float rotCorner = -(1. - uniform.factor) * 1.5707963;
+        float2 rot = float2(cos(rotCorner), sin(rotCorner));
+        
+        uv = (uv - center + float2(uniform.roi.b * (1.0 - uniform.factor), 0.0)) * uniform.iResolution;
+        uv = float2(rot.x * uv.x + rot.y * uv.y, -rot.y * uv.x + rot.x * uv.y);
+        uv = uv / uniform.iResolution + center;
+        
+        half4 fgCol = inputTexture2.sample(quadSampler, uv);
         
         return half4(mix(bgCol.rgb, fgCol.rgb, fgCol.a), fgCol.a);
     }

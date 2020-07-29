@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     var player: MetalVideoProcessPlayer?
     var editor: MetalVideoEditor?
-    public var motionIn: MetalVideoProcessMotion = MetalVideoProcessMoveInMotion()
+    public var motionIn: MetalVideoProcessMotion = MetalVideoProcessMoveUpMotion()
     
     override func viewDidLoad() {
         super.viewDidLoad()

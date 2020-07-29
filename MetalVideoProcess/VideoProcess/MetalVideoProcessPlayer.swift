@@ -145,7 +145,7 @@ public class MetalVideoProcessPlayer: ImageSource {
         self.playerItem = playerItem
         
         self.player = AVPlayer(playerItem: self.playerItem)
-
+        
         self.player.volume = 1.0
         self.playerItem.add(self.videoOutput)
         self.videoOutput.requestNotificationOfMediaDataChange(withAdvanceInterval: 0.1)
@@ -160,6 +160,7 @@ public class MetalVideoProcessPlayer: ImageSource {
         self.playbackCompositor = compositor
         compositor.delegate = self
         self.playerItem.preferredForwardBufferDuration = 0.5
+        self.seekTo(time: 0.0)
     }
     
     public func updatePlayerItem(playerItem: AVPlayerItem) {
@@ -524,9 +525,6 @@ public class MetalVideoProcessPlayer: ImageSource {
                 self.play()
             }
         }
-        
-        
-        
     }
     
     public func suspend() {

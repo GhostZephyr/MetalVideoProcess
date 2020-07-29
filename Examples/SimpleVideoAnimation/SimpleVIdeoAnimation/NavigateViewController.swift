@@ -16,19 +16,33 @@ class NavigateViewController: UIViewController {
 
     var transitionTimeRange = CMTimeRange.init()
     
-    let N = 3
+    let N = 11
     private func getTransition(index: Int) -> (titleName: String, transObject: MetalVideoProcessMotion) {
         switch index {
         case 0:
-        return (titleName: "向上滑动", transObject: MetalVideoProcessMoveUpMotion())
+            return (titleName: "向上滑动", transObject: MetalVideoProcessMoveUpMotion())
         case 1:
-        return (titleName: "放大", transObject: MetalVideoProcessMoveInMotion())
+            return (titleName: "放大", transObject: MetalVideoProcessZoomInMotion())
         case 2:
-        return (titleName: "旋转", transObject: MetalVideoProcessRotateMotion())
+            return (titleName: "旋转", transObject: MetalVideoProcessRotateMotion())
         case 3:
-        return (titleName: "渐显", transObject: MetalVideoProcessFadeInMotion())
+            return (titleName: "渐显", transObject: MetalVideoProcessFadeInMotion())
+        case 4:
+            return (titleName: "向右转入", transObject: MetalVideoProcessRotateInRightMotion())
+        case 5:
+            return (titleName: "涡旋旋转", transObject: MetalVideoProcessSwirlMotion())
+        case 6:
+            return (titleName: "缩小", transObject: MetalVideoProcessZoomOutMotion())
+        case 7:
+            return (titleName: "向左滑入", transObject: MetalVideoProcessMoveLeftMotion())
+        case 8:
+            return (titleName: "向右滑入", transObject: MetalVideoProcessMoveRightMotion())
+        case 9:
+            return (titleName: "向上旋入", transObject: MetalVideoProcessUpMoveInBlurMotion())
+        case 10:
+            return (titleName: "动感缩小", transObject: MetalVideoProcessZoomOutBlurMotion())
         default:
-        return (titleName: "放大", transObject: MetalVideoProcessMoveInMotion())
+        return (titleName: "放大", transObject: MetalVideoProcessMoveUpMotion())
         
         }
     }

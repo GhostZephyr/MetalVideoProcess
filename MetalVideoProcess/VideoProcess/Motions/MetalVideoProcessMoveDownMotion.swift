@@ -1,5 +1,5 @@
 //
-//  MetalVideoProcessMoveInMotion.swift
+//  MetalVideoProcessMoveDownMotion.swift
 //  MetalVideoProcess
 //
 //  Created by Ruanshengqiang Macro on 2020/7/21.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-public  class MetalVideoProcessMoveInMotion: MetalVideoProcessMotion {
- 
+public  class MetalVideoProcessMoveDownMotion: MetalVideoProcessMotion {
+    
     public init() {
-        super.init(fragmentFunctionName: "moveInMotion", numberOfInputs: 2, device: sharedMetalRenderingDevice)
+        super.init(fragmentFunctionName: "moveDownMotion", numberOfInputs: 2, device: sharedMetalRenderingDevice)
         self.timingType = .quadraticEaseIn
         self.factor = 0.0
     }
@@ -22,7 +22,7 @@ public  class MetalVideoProcessMoveInMotion: MetalVideoProcessMotion {
                 factor = 0.0
             }
             
-            debugPrint("moveInMotion:", factor, " frameTime:", texture.frameTime)
+            debugPrint("moveUpMotion:", factor, " frameTime:", texture.frameTime)
             super.newTextureAvailable(texture, fromSourceIndex: fromSourceIndex, trackID: trackID)
         }
     }
