@@ -4,9 +4,25 @@ MetalVideoProcess is a High-Performance video effects processing framework. It's
 ## Technical requirements
 
 - Swift 5.0
+
 - Xcode 10.2 or higher on Mac or iOS
+
 - iOS: 11.0 or higher
+
 - OSX: 10.11 or higher
+
+  
+
+## Features
+
+- Realtime smooth playback with filters
+- Support two video transitions
+- Support video motions
+- Video picture in picture
+- Transform video with multitouch
+- Support export video with H.265
+- Support video split, delete, insert, merge
+- High performance metal rendering
 
 
 
