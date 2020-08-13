@@ -1,5 +1,5 @@
 //
-//  swirlMotion.metal
+//  zoomOutBluMotion.metal
 //  MetalVideoProcess
 //
 //  Created by Ruanshengqiang Macro on 2020/7/21.
@@ -10,38 +10,39 @@
 using namespace metal;
 #include "../../Vender/Render/Base/OperationShaderTypes.h"
 
-namespace swirlMotion {
+namespace zoomInBlurMotion {
     typedef struct
     {
         float factor;
         float4 roi;
         float2 iResolution;
-        
     } MotionUniform;
     
-    fragment half4 swirlMotion(TwoInputVertexIO fragmentInput [[stage_in]],
+    fragment half4 zoomInBlurMotion(TwoInputVertexIO fragmentInput [[stage_in]],
                                 texture2d<half> inputTexture [[texture(0)]],
                                 texture2d<half> inputTexture2 [[texture(1)]],
                                 constant MotionUniform& uniform [[ buffer(1) ]])
     {
         
         constexpr sampler quadSampler(mip_filter::linear, min_filter::linear, mag_filter::linear, address::clamp_to_zero);
-        float2 center = float2(uniform.roi.r + uniform.roi.b * 0.5, uniform.roi.g + uniform.roi.a * 0.5);
-        
+       
         half4 bgCol = inputTexture.sample(quadSampler, fragmentInput.textureCoordinate);
         
+        float2 center = float2(uniform.roi.r + uniform.roi.b * 0.5, uniform.roi.g + uniform.roi.a * 0.5);
+        float time = clamp(uniform.factor * 2.0, 0.0, 1.0);
         float2 uv = fragmentInput.textureCoordinate2;
         
-        float2 tempUv = uv - center;
-        float theta = atan2(tempUv.y, tempUv.x);
-        float r = length(tempUv);
-        theta = theta + r * 20.0 * (1. - uniform.factor);
-        uv = float2(r * cos(theta), r * sin(theta)) + center;
+        uv = (uv - center);
+        uv = uv * (3.0 - 2.0 * uniform.factor) + center;
         
-        half4 fgCol = inputTexture2.sample(quadSampler, uv);
+        float2 dir = float2(uv - center) * 0.5 * (1. - time);
         
+        half4 fgCol = half4(0.0);
+        for(float i = 0.0; i < 1.0; i = i + 0.1) {
+            fgCol += inputTexture2.sample(quadSampler, uv + dir * i);
+        }
+            
+        fgCol /= 10.0;
         return half4(bgCol.rgb * (1. - fgCol.a) + fgCol.rgb, fgCol.a);
     }
 }
-
-

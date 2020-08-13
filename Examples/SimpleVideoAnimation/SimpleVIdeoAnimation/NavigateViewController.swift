@@ -16,34 +16,55 @@ class NavigateViewController: UIViewController {
 
     var transitionTimeRange = CMTimeRange.init()
     
-    let N = 11
+    let N = 19
     private func getTransition(index: Int) -> (titleName: String, transObject: MetalVideoProcessMotion) {
         switch index {
         case 0:
-            return (titleName: "向上滑动", transObject: MetalVideoProcessMoveUpMotion())
-        case 1:
-            return (titleName: "放大", transObject: MetalVideoProcessZoomInMotion())
-        case 2:
-            return (titleName: "旋转", transObject: MetalVideoProcessRotateMotion())
-        case 3:
             return (titleName: "渐显", transObject: MetalVideoProcessFadeInMotion())
-        case 4:
-            return (titleName: "向右转入", transObject: MetalVideoProcessRotateInRightMotion())
-        case 5:
-            return (titleName: "涡旋旋转", transObject: MetalVideoProcessSwirlMotion())
-        case 6:
+        case 1:
+            return (titleName: "轻微放大", transObject: MetalVideoProcessSlimZoomInMotion())
+        case 2:
+            return (titleName: "放大", transObject: MetalVideoProcessZoomInMotion())
+        case 3:
             return (titleName: "缩小", transObject: MetalVideoProcessZoomOutMotion())
-        case 7:
+        case 4:
             return (titleName: "向左滑入", transObject: MetalVideoProcessMoveLeftMotion())
-        case 8:
+        case 5:
             return (titleName: "向右滑入", transObject: MetalVideoProcessMoveRightMotion())
+        case 6:
+            return (titleName: "向下滑动", transObject: MetalVideoProcessMoveDownMotion())
+        case 7:
+            return (titleName: "向上滑动", transObject: MetalVideoProcessMoveUpMotion())
+        case 8:
+            return (titleName: "旋转", transObject: MetalVideoProcessRotateMotion())
         case 9:
-            return (titleName: "向上旋入", transObject: MetalVideoProcessUpMoveInBlurMotion())
+            return (titleName: "涡旋旋转", transObject: MetalVideoProcessSwirlMotion())
         case 10:
+            return (titleName: "镜像旋转", transObject: MetalVideoProcessMirrorRotateMotion())
+        case 11:
+            return (titleName: "向上旋入", transObject: MetalVideoProcessUpMoveInBlurMotion())
+        case 12:
+            return (titleName: "向上旋入II", transObject: MetalVideoProcessUpMoveInBlurIIMotion())
+        case 13:
+            return (titleName: "雨刷", transObject: MetalVideoProcessWiperMotion())
+        case 14:
+            return (titleName: "摆钟", transObject: MetalVideoProcessPendulumMotion())
+        case 15:
+            return (titleName: "向右甩入", transObject: MetalVideoProcessRightDropMotion())
+        case 16:
+            return (titleName: "向下甩入", transObject: MetalVideoProcessUpDropMotion())
+        case 17:
+            return (titleName: "动感放大", transObject: MetalVideoProcessZoomInBlurMotion())
+        case 18:
             return (titleName: "动感缩小", transObject: MetalVideoProcessZoomOutBlurMotion())
-        default:
-        return (titleName: "放大", transObject: MetalVideoProcessMoveUpMotion())
+            /*
+        case 15:
+            return (titleName: "向右转入", transObject: MetalVideoProcessRotateInRightMotion())
         
+         */
+        default:
+            return (titleName: "放大", transObject: MetalVideoProcessMoveUpMotion())
+ 
         }
     }
     private func getButton(index: Int) -> UIButton {

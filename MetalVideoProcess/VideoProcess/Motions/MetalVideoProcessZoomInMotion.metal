@@ -32,7 +32,7 @@ namespace zoomInMotion {
         
         half4 fgCol = inputTexture2.sample(quadSampler, (uv - center) * (2. - uniform.factor)  + center);
         
-        return half4(mix(bgCol.rgb, fgCol.rgb, fgCol.a), fgCol.a);
+        return half4(bgCol.rgb * (1. - fgCol.a) + fgCol.rgb, fgCol.a);
     }
 }
 

@@ -31,7 +31,7 @@ namespace moveUpMotion {
         
         half4 fgCol = inputTexture2.sample(quadSampler, uv - float2(0.0, uniform.roi.a) + float2(0.0, uniform.roi.a * uniform.factor));
         
-        return half4(mix(bgCol.rgb, fgCol.rgb, fgCol.a), fgCol.a);
+        return half4(bgCol.rgb * (1. - fgCol.a) + fgCol.rgb, fgCol.a);
     }
 }
 

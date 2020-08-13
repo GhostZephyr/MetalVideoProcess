@@ -31,7 +31,7 @@ namespace moveLeftMotion {
         
         half4 fgCol = inputTexture2.sample(quadSampler, uv - float2(uniform.roi.b, 0.0) + float2(uniform.roi.b * uniform.factor, 0.0));
         
-        return half4(mix(bgCol.rgb, fgCol.rgb, fgCol.a), fgCol.a);
+        return half4(bgCol.rgb * (1. - fgCol.a) + fgCol.rgb, fgCol.a);
     }
 }
 

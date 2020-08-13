@@ -38,11 +38,11 @@ namespace zoomOutBlurMotion {
         float2 dir = float2(uv - center) * 0.5 * (1. - time);
         
         half4 fgCol = half4(0.0);
-        for(float i = 0.0; i < 1.0; i = i + 0.2) {
+        for(float i = 0.0; i < 1.0; i = i + 0.1) {
             fgCol += inputTexture2.sample(quadSampler, uv + dir * i);
         }
             
-        fgCol /= 5.0;
+        fgCol /= 10.0;
         return half4(bgCol.rgb * (1. - fgCol.a) + fgCol.rgb, fgCol.a);
     }
 }
