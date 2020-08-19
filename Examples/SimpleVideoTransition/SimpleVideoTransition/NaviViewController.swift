@@ -16,7 +16,7 @@ class NaviViewController: UIViewController {
 
     var transitionTimeRange = CMTimeRange.init()
     
-    let N = 7
+    let N = 14
     private func getTransition(index: Int) -> (titleName: String, transObject: MetalVideoProcessTransition) {
         switch index {
         case 0:
@@ -33,6 +33,18 @@ class NaviViewController: UIViewController {
         return (titleName: "燃烧", transObject: MetalVideoProcessBurnTransition())
         case 6:
         return (titleName: "立方体", transObject: MetalVideoProcessCubeTransition())
+        case 7:
+        return (titleName: "向上擦除", transObject: MetalVideoProcessEraseUpTransition())
+        case 8:
+        return (titleName: "向左擦除", transObject: MetalVideoProcessEraseLeftTransition())
+        case 9:
+        return (titleName: "向右擦除", transObject: MetalVideoProcessEraseRightTransition())
+        case 10:
+        return (titleName: "变形", transObject: MetalVideoProcessMorphTransition())
+        case 11:
+        return (titleName: "圆形蒙版", transObject: MetalVideoProcessCircleEraseTransition())
+        case 12:
+        return (titleName: "上移", transObject: MetalVideoProcessVerticalUpGlitchTransition())
         default:
         return (titleName: "倒影", transObject: MetalVideoProcessReflectTransition())
         }

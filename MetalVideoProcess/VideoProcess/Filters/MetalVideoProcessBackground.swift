@@ -143,7 +143,7 @@ public class MetalVideoProcessBackground: MetalVideoProcessFilterGroup  {
         }
     }
     
-    public override init(trackID: Int32) {
+    public init(trackID: Int32) {
         super.init(trackID: trackID)
         self.trackID = trackID
         

@@ -1,8 +1,8 @@
 //
-//  MetalVideoProcessBurnTransition.swift
+//  MetalVideoProcessCubeTransition.swift
 //  MetalVideoProcess
 //
-//  Created by RenZhu Macro on 2020/7/16.
+//  Created by Ruanshengqiang Macro on 2020/7/16.
 //  Copyright © 2020 RenZhu Macro. All rights reserved.
 //
 

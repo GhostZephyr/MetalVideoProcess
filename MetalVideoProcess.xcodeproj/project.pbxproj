@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A24CA0724ECCC4600F9D8BC /* MetalVideoProcessEraseLeftTransition.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6A24C9FB24ECCC4600F9D8BC /* MetalVideoProcessEraseLeftTransition.metal */; };
+		6A24CA0824ECCC4600F9D8BC /* MetalVideoProcessVerticalUpGlitchTransition.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6A24C9FC24ECCC4600F9D8BC /* MetalVideoProcessVerticalUpGlitchTransition.metal */; };
+		6A24CA0924ECCC4600F9D8BC /* MetalVideoProcessEraseRightTransition.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6A24C9FD24ECCC4600F9D8BC /* MetalVideoProcessEraseRightTransition.metal */; };
+		6A24CA0A24ECCC4600F9D8BC /* MetalVideoProcessEraseRightTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A24C9FE24ECCC4600F9D8BC /* MetalVideoProcessEraseRightTransition.swift */; };
+		6A24CA0B24ECCC4600F9D8BC /* MetalVideoProcessMorphTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A24C9FF24ECCC4600F9D8BC /* MetalVideoProcessMorphTransition.swift */; };
+		6A24CA0C24ECCC4600F9D8BC /* MetalVideoProcessEraseUpTransition.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6A24CA0024ECCC4600F9D8BC /* MetalVideoProcessEraseUpTransition.metal */; };
+		6A24CA0D24ECCC4600F9D8BC /* MetalVideoProcessVerticalUpGlitchTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A24CA0124ECCC4600F9D8BC /* MetalVideoProcessVerticalUpGlitchTransition.swift */; };
+		6A24CA0E24ECCC4600F9D8BC /* MetalVideoProcessEraseUpTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A24CA0224ECCC4600F9D8BC /* MetalVideoProcessEraseUpTransition.swift */; };
+		6A24CA0F24ECCC4600F9D8BC /* MetalVideoProcessEraseLeftTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A24CA0324ECCC4600F9D8BC /* MetalVideoProcessEraseLeftTransition.swift */; };
+		6A24CA1024ECCC4600F9D8BC /* MetalVideoProcessMorphTransition.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6A24CA0424ECCC4600F9D8BC /* MetalVideoProcessMorphTransition.metal */; };
+		6A24CA1124ECCC4600F9D8BC /* MetalVideoProcessCircleEraseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A24CA0524ECCC4600F9D8BC /* MetalVideoProcessCircleEraseTransition.swift */; };
+		6A24CA1224ECCC4600F9D8BC /* MetalVideoProcessCircleEraseTransition.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6A24CA0624ECCC4600F9D8BC /* MetalVideoProcessCircleEraseTransition.metal */; };
 		6A3E705924BD9099009A0AC9 /* MetalVideoProcessTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3E705824BD9099009A0AC9 /* MetalVideoProcessTransition.swift */; };
 		6A874BC224C594EC00ADFD8A /* MetalVideoProcessMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A874BC124C594EC00ADFD8A /* MetalVideoProcessMotion.swift */; };
 		6A874BD024C6E1C200ADFD8A /* MetalVideoProcessFadeInMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A874BCF24C6E1C200ADFD8A /* MetalVideoProcessFadeInMotion.swift */; };
@@ -140,6 +152,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A24C9FB24ECCC4600F9D8BC /* MetalVideoProcessEraseLeftTransition.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalVideoProcessEraseLeftTransition.metal; sourceTree = "<group>"; };
+		6A24C9FC24ECCC4600F9D8BC /* MetalVideoProcessVerticalUpGlitchTransition.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalVideoProcessVerticalUpGlitchTransition.metal; sourceTree = "<group>"; };
+		6A24C9FD24ECCC4600F9D8BC /* MetalVideoProcessEraseRightTransition.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalVideoProcessEraseRightTransition.metal; sourceTree = "<group>"; };
+		6A24C9FE24ECCC4600F9D8BC /* MetalVideoProcessEraseRightTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessEraseRightTransition.swift; sourceTree = "<group>"; };
+		6A24C9FF24ECCC4600F9D8BC /* MetalVideoProcessMorphTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessMorphTransition.swift; sourceTree = "<group>"; };
+		6A24CA0024ECCC4600F9D8BC /* MetalVideoProcessEraseUpTransition.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalVideoProcessEraseUpTransition.metal; sourceTree = "<group>"; };
+		6A24CA0124ECCC4600F9D8BC /* MetalVideoProcessVerticalUpGlitchTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessVerticalUpGlitchTransition.swift; sourceTree = "<group>"; };
+		6A24CA0224ECCC4600F9D8BC /* MetalVideoProcessEraseUpTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessEraseUpTransition.swift; sourceTree = "<group>"; };
+		6A24CA0324ECCC4600F9D8BC /* MetalVideoProcessEraseLeftTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessEraseLeftTransition.swift; sourceTree = "<group>"; };
+		6A24CA0424ECCC4600F9D8BC /* MetalVideoProcessMorphTransition.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalVideoProcessMorphTransition.metal; sourceTree = "<group>"; };
+		6A24CA0524ECCC4600F9D8BC /* MetalVideoProcessCircleEraseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessCircleEraseTransition.swift; sourceTree = "<group>"; };
+		6A24CA0624ECCC4600F9D8BC /* MetalVideoProcessCircleEraseTransition.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalVideoProcessCircleEraseTransition.metal; sourceTree = "<group>"; };
 		6A3E705824BD9099009A0AC9 /* MetalVideoProcessTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessTransition.swift; sourceTree = "<group>"; };
 		6A874BC124C594EC00ADFD8A /* MetalVideoProcessMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessMotion.swift; sourceTree = "<group>"; };
 		6A874BCF24C6E1C200ADFD8A /* MetalVideoProcessFadeInMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalVideoProcessFadeInMotion.swift; sourceTree = "<group>"; };
@@ -583,6 +607,18 @@
 		AB64835724C03CEA00A0266B /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
+				6A24CA0624ECCC4600F9D8BC /* MetalVideoProcessCircleEraseTransition.metal */,
+				6A24CA0524ECCC4600F9D8BC /* MetalVideoProcessCircleEraseTransition.swift */,
+				6A24C9FB24ECCC4600F9D8BC /* MetalVideoProcessEraseLeftTransition.metal */,
+				6A24CA0324ECCC4600F9D8BC /* MetalVideoProcessEraseLeftTransition.swift */,
+				6A24C9FD24ECCC4600F9D8BC /* MetalVideoProcessEraseRightTransition.metal */,
+				6A24C9FE24ECCC4600F9D8BC /* MetalVideoProcessEraseRightTransition.swift */,
+				6A24CA0024ECCC4600F9D8BC /* MetalVideoProcessEraseUpTransition.metal */,
+				6A24CA0224ECCC4600F9D8BC /* MetalVideoProcessEraseUpTransition.swift */,
+				6A24CA0424ECCC4600F9D8BC /* MetalVideoProcessMorphTransition.metal */,
+				6A24C9FF24ECCC4600F9D8BC /* MetalVideoProcessMorphTransition.swift */,
+				6A24C9FC24ECCC4600F9D8BC /* MetalVideoProcessVerticalUpGlitchTransition.metal */,
+				6A24CA0124ECCC4600F9D8BC /* MetalVideoProcessVerticalUpGlitchTransition.swift */,
 				AB59B91E24C831D800943BE2 /* MetalVideoProcessBurnTransition.metal */,
 				AB59B92224C831D800943BE2 /* MetalVideoProcessBurnTransition.swift */,
 				AB59B91B24C831D700943BE2 /* MetalVideoProcessCubeTransition.metal */,
@@ -686,6 +722,7 @@
 				6ADB072A24ADCC250010A817 /* MetalVideoProcessColorFilter.swift in Sources */,
 				6ADB071124ADC4DC0010A817 /* MetalVideoProcessMovieWriter.swift in Sources */,
 				AB4C45E624D0255600315A52 /* MetalVideoProcessMoveDownMotion.metal in Sources */,
+				6A24CA1124ECCC4600F9D8BC /* MetalVideoProcessCircleEraseTransition.swift in Sources */,
 				6ADB06A224ADB3B70010A817 /* CompositionProvider.swift in Sources */,
 				6ADB06F924ADBE1D0010A817 /* YUVToRGBConversion.metal in Sources */,
 				AB59B92B24C831D900943BE2 /* MetalVideoProcessFadeTransition.swift in Sources */,
@@ -708,6 +745,7 @@
 				6ADB066C24AD8B7E0010A817 /* ImageOrientation.swift in Sources */,
 				AB59B93524C831D900943BE2 /* MetalVideoProcessEraseDownTransition.swift in Sources */,
 				6ADB069E24ADB3B70010A817 /* AudioMixer.swift in Sources */,
+				6A24CA1224ECCC4600F9D8BC /* MetalVideoProcessCircleEraseTransition.metal in Sources */,
 				AB59B94E24C96E3100943BE2 /* MetalVideoProcessZoomInMotion.swift in Sources */,
 				6ADB071824ADC4F80010A817 /* MetalVideoProcessTransformFilter.metal in Sources */,
 				AB59B93124C831D900943BE2 /* MetalVideoProcessEraseDownTransition.metal in Sources */,
@@ -723,6 +761,7 @@
 				AB00F87C24D7F45E00413EE8 /* MetalVideoProcessUpDropMotion.swift in Sources */,
 				6ADB069C24ADB3B70010A817 /* CompositionGenerator.swift in Sources */,
 				6ADB06EF24ADBBDA0010A817 /* SolidColorGenerator.swift in Sources */,
+				6A24CA0824ECCC4600F9D8BC /* MetalVideoProcessVerticalUpGlitchTransition.metal in Sources */,
 				AB59B94124C921F300943BE2 /* MetalVideoProcessRotateMotion.swift in Sources */,
 				6ADB06AD24ADB3B70010A817 /* AVAssetTrackResource.swift in Sources */,
 				AB00F87424D7ED4300413EE8 /* MetalVideoProcessPendulumMotion.swift in Sources */,
@@ -753,7 +792,9 @@
 				6ADB071724ADC4F80010A817 /* MetalVideoProcessBeautyFilter.swift in Sources */,
 				AB59B93324C831D900943BE2 /* MetalVideoProcessReflectTransition.swift in Sources */,
 				6ADB06AF24ADB3B70010A817 /* AVAssetReaderImageResource.swift in Sources */,
+				6A24CA1024ECCC4600F9D8BC /* MetalVideoProcessMorphTransition.metal in Sources */,
 				6ADB072B24ADCC250010A817 /* MetalVideoProcessColorFilter.metal in Sources */,
+				6A24CA0C24ECCC4600F9D8BC /* MetalVideoProcessEraseUpTransition.metal in Sources */,
 				AB4C45D924D01B7D00315A52 /* MetalVideoProcessZoomOutMotion.swift in Sources */,
 				6ADB072624ADCC1C0010A817 /* MetalVideoProcessBackground.swift in Sources */,
 				AB4C45E524D0255600315A52 /* MetalVideoProcessMoveDownMotion.swift in Sources */,
@@ -771,8 +812,10 @@
 				AB59B92E24C831D900943BE2 /* MetalVideoProcessMirrorRotateTransition.swift in Sources */,
 				AB59B92F24C831D900943BE2 /* MetalVideoProcessMirrorRotateTransition.metal in Sources */,
 				AB4F025F24D7B20300D0C673 /* MetalVideoProcessUpMoveInBlurIIMotion.swift in Sources */,
+				6A24CA0E24ECCC4600F9D8BC /* MetalVideoProcessEraseUpTransition.swift in Sources */,
 				AB7B932324D1640E006D0761 /* MetalVideoProcessZoomOutBlurMotion.swift in Sources */,
 				AB59B94A24C9672C00943BE2 /* MetalVideoProcessMoveUpMotion.swift in Sources */,
+				6A24CA0724ECCC4600F9D8BC /* MetalVideoProcessEraseLeftTransition.metal in Sources */,
 				6ADB06A424ADB3B70010A817 /* ImageOverlayItem.swift in Sources */,
 				AB4C45DD24D01E3600315A52 /* MetalVideoProcessMoveLeftMotion.metal in Sources */,
 				AB59B92C24C831D900943BE2 /* MetalVideoProcessBurnTransition.metal in Sources */,
@@ -788,11 +831,16 @@
 				6ADB066924AD8B7E0010A817 /* ShaderUniformSettings.swift in Sources */,
 				AB59B94224C921F300943BE2 /* MetalVideoProcessRotateMotion.metal in Sources */,
 				6ADB071024ADC4DC0010A817 /* MetalVideoProcessPlayer+CompositorDelegate.swift in Sources */,
+				6A24CA0B24ECCC4600F9D8BC /* MetalVideoProcessMorphTransition.swift in Sources */,
 				6ADB06B224ADB3B70010A817 /* TimingFunctionFactory.swift in Sources */,
 				AB4F026024D7B20300D0C673 /* MetalVideoProcessUpMoveInBlurIIMotion.metal in Sources */,
 				6ADB072424ADCBC30010A817 /* MetalVideoProcessGaussianBlurFilter.swift in Sources */,
 				AB59B92924C831D900943BE2 /* MetalVideoProcessCubeTransition.metal in Sources */,
 				6ADB070624ADC4100010A817 /* RenderView.swift in Sources */,
+				6A24CA0924ECCC4600F9D8BC /* MetalVideoProcessEraseRightTransition.metal in Sources */,
+				6A24CA0F24ECCC4600F9D8BC /* MetalVideoProcessEraseLeftTransition.swift in Sources */,
+				6A24CA0A24ECCC4600F9D8BC /* MetalVideoProcessEraseRightTransition.swift in Sources */,
+				6A24CA0D24ECCC4600F9D8BC /* MetalVideoProcessVerticalUpGlitchTransition.swift in Sources */,
 				6ADB06F824ADBE1D0010A817 /* YUVToRGBConversion.swift in Sources */,
 				6ADB069D24ADB3B70010A817 /* AudioProcessingTapHolder.swift in Sources */,
 				6ADB067024AD8B7E0010A817 /* Position.swift in Sources */,

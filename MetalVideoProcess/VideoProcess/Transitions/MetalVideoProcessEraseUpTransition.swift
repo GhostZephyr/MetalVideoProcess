@@ -1,5 +1,5 @@
 //
-//  MetalVideoProcessBurnTransition.swift
+//  MetalVideoProcessEraseUpTransition.swift
 //  MetalVideoProcess
 //
 //  Created by Ruanshengqiang Macro on 2020/7/16.
@@ -8,10 +8,10 @@
 
 import AVFoundation
 
-public class MetalVideoProcessBurnTransition: MetalVideoProcessTransition {
+public class MetalVideoProcessEraseUpTransition: MetalVideoProcessTransition {
 
     public init() {
-        super.init(fragmentFunctionName: "burnTransition", numberOfInputs: 2, device: sharedMetalRenderingDevice)
+        super.init(fragmentFunctionName: "eraseUpTransition", numberOfInputs: 2, device: sharedMetalRenderingDevice)
         self.timingType = .linearInterpolation
     }
 }

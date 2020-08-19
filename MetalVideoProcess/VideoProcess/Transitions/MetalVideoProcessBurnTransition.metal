@@ -1,5 +1,5 @@
 //
-//  MetalVideoProcessFadeTransition.metal
+//  MetalVideoProcessBurnTransition.metal
 //  MetalVideoProcess
 //
 //  Created by Ruanshengqiang Macro on 2020/7/16.
