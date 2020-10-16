@@ -136,8 +136,9 @@ extension ViewController: MetalVideoProcessPlayerDelegate {
            source --> self.movieWriter!
            self.view.isUserInteractionEnabled = false
            
-           try? self.player?.startExport()
+           
            self.movieWriter?.activateAudioTrack()
            self.movieWriter?.startRecording()
+            try? self.player?.startExport()
        }
 }

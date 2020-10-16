@@ -1,6 +1,7 @@
 import Foundation
 import AVFoundation
 import Metal
+import CoreImage
 
 public protocol CameraDelegate {
     func didCaptureBuffer(_ sampleBuffer: CMSampleBuffer)
@@ -72,7 +73,10 @@ public class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBuffer
     
     var supportsFullYUVRange: Bool = false
     let captureAsYUV: Bool
-    let yuvConversionRenderPipelineState: MTLRenderPipelineState?
+//    let yuvConversionRenderPipelineState: MTLRenderPipelineState?
+    
+    /// 通过Compute方式转化
+    var yuvConversionComputePipelineState: MTLComputePipelineState?
     var yuvLookupTable: [String: (Int, MTLDataType)] = [: ]
     
     let frameRenderingSemaphore = DispatchSemaphore(value: 1)
@@ -110,7 +114,7 @@ public class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBuffer
                 self.videoInput = nil
                 self.videoOutput = nil
                 self.inputCamera = nil
-                self.yuvConversionRenderPipelineState = nil
+                self.yuvConversionComputePipelineState = nil
                 super.init()
                 throw CameraError()
             }
@@ -121,7 +125,7 @@ public class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBuffer
         } catch {
             self.videoInput = nil
             self.videoOutput = nil
-            self.yuvConversionRenderPipelineState = nil
+            self.yuvConversionComputePipelineState = nil
             super.init()
             throw error
         }
@@ -133,7 +137,12 @@ public class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBuffer
         // Add the video frame output
         videoOutput = AVCaptureVideoDataOutput()
         videoOutput.alwaysDiscardsLateVideoFrames = false
-        
+        #if targetEnvironment(simulator)
+        self.yuvConversionRenderPipelineState = nil
+        super.init()
+        #else
+                
+      
         if captureAsYUV {
             supportsFullYUVRange = false
             let supportedPixelFormats = videoOutput.availableVideoPixelFormatTypes
@@ -143,20 +152,20 @@ public class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBuffer
                 }
             }
             if (supportsFullYUVRange) {
-                let (pipelineState, lookupTable) = generateRenderPipelineState(device: sharedMetalRenderingDevice, vertexFunctionName: "twoInputVertex", fragmentFunctionName: "yuvConversionFullRangeFragment", operationName: "YUVToRGB")
-                self.yuvConversionRenderPipelineState = pipelineState
+                let (pipelineState, lookupTable) = generateComputePipelineState(device: sharedMetalRenderingDevice, kernelFunctionName: "yuv2rgb", operationName: "YUVToRGB")
                 self.yuvLookupTable = lookupTable
+                self.yuvConversionComputePipelineState = pipelineState
                 videoOutput.videoSettings = [kCVPixelBufferMetalCompatibilityKey as String: true,
                                              kCVPixelBufferPixelFormatTypeKey as String: NSNumber(value: Int32(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange))]
             } else {
-                let (pipelineState, lookupTable) = generateRenderPipelineState(device: sharedMetalRenderingDevice, vertexFunctionName: "twoInputVertex", fragmentFunctionName: "yuvConversionVideoRangeFragment", operationName: "YUVToRGB")
-                self.yuvConversionRenderPipelineState = pipelineState
-                self.yuvLookupTable = lookupTable
-                videoOutput.videoSettings = [kCVPixelBufferMetalCompatibilityKey as String: true,
-                                             kCVPixelBufferPixelFormatTypeKey as String: NSNumber(value: Int32(kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange))]
+//                let (pipelineState, lookupTable) = generateRenderPipelineState(device: sharedMetalRenderingDevice, vertexFunctionName: "twoInputVertex", fragmentFunctionName: "yuvConversionVideoRangeFragment", operationName: "YUVToRGB")
+//                self.yuvConversionRenderPipelineState = pipelineState
+//                self.yuvLookupTable = lookupTable
+//                videoOutput.videoSettings = [kCVPixelBufferMetalCompatibilityKey as String: true,
+//                                             kCVPixelBufferPixelFormatTypeKey as String: NSNumber(value: Int32(kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange))]
             }
         } else {
-            self.yuvConversionRenderPipelineState = nil
+            self.yuvConversionComputePipelineState = nil
             videoOutput.videoSettings = [kCVPixelBufferMetalCompatibilityKey as String: true,
                                          kCVPixelBufferPixelFormatTypeKey as String: NSNumber(value: Int32(kCVPixelFormatType_32BGRA))]
         }
@@ -173,6 +182,7 @@ public class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBuffer
         let _ = CVMetalTextureCacheCreate(kCFAllocatorDefault, nil, sharedMetalRenderingDevice.device, nil, &videoTextureCache)
         
         videoOutput.setSampleBufferDelegate(self, queue: cameraProcessingQueue)
+        #endif
     }
     
     deinit {
@@ -228,11 +238,16 @@ public class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBuffer
                         outputHeight = bufferHeight
                     }
                     let outputTexture = Texture(device: sharedMetalRenderingDevice.device, orientation: .portrait, width: outputWidth, height: outputHeight, timingStyle: .videoFrame(timestamp: Timestamp(currentTime)))
-                    
-                    convertYUVToRGB(pipelineState: self.yuvConversionRenderPipelineState!, lookupTable: self.yuvLookupTable,
-                                    luminanceTexture: Texture(orientation: self.orientation ?? self.location.imageOrientation(), texture: luminanceTexture),
-                                    chrominanceTexture: Texture(orientation: self.orientation ?? self.location.imageOrientation(), texture: chrominanceTexture),
-                                    resultTexture: outputTexture, colorConversionMatrix: conversionMatrix)
+                    convertYUVtoRGBCompute(pipelineState: self.yuvConversionComputePipelineState!,
+                                           lookupTable: self.yuvLookupTable,
+                                           luminanceTexture: Texture(orientation: self.orientation ?? self.location.imageOrientation(), texture: luminanceTexture),
+                                           chrominanceTexture: Texture(orientation: self.orientation ?? self.location.imageOrientation(), texture: chrominanceTexture),
+                                           resultTexture: outputTexture,
+                                           colorConversionMatrix: conversionMatrix)
+//                    convertYUVToRGB(pipelineState: self.yuvConversionRenderPipelineState!, lookupTable: self.yuvLookupTable,
+//                                    luminanceTexture: Texture(orientation: self.orientation ?? self.location.imageOrientation(), texture: luminanceTexture),
+//                                    chrominanceTexture: Texture(orientation: self.orientation ?? self.location.imageOrientation(), texture: chrominanceTexture),
+//                                    resultTexture: outputTexture, colorConversionMatrix: conversionMatrix)
                     texture = outputTexture
                 } else {
                     texture = nil

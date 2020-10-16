@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36E063AD2523E25200CCC13B /* PlaygroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E063AC2523E25200CCC13B /* PlaygroundVC.swift */; };
 		6ADB075A24ADDB0C0010A817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB075924ADDB0C0010A817 /* AppDelegate.swift */; };
 		6ADB075C24ADDB0C0010A817 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB075B24ADDB0C0010A817 /* SceneDelegate.swift */; };
 		6ADB075E24ADDB0C0010A817 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADB075D24ADDB0C0010A817 /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		36E063AC2523E25200CCC13B /* PlaygroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundVC.swift; sourceTree = "<group>"; };
 		6ADB075624ADDB0C0010A817 /* SimpleRealtimeFilterPlayback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleRealtimeFilterPlayback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ADB075924ADDB0C0010A817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6ADB075B24ADDB0C0010A817 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				6ADB075924ADDB0C0010A817 /* AppDelegate.swift */,
 				6ADB075B24ADDB0C0010A817 /* SceneDelegate.swift */,
 				6ADB075D24ADDB0C0010A817 /* ViewController.swift */,
+				36E063AC2523E25200CCC13B /* PlaygroundVC.swift */,
 				6ADB075F24ADDB0C0010A817 /* Main.storyboard */,
 				6ADB07DB24AED8910010A817 /* 853.mp4 */,
 				6ADB07D924AED8220010A817 /* cute.mp4 */,
@@ -219,6 +222,7 @@
 				6ADB075E24ADDB0C0010A817 /* ViewController.swift in Sources */,
 				6ADB075A24ADDB0C0010A817 /* AppDelegate.swift in Sources */,
 				6ADB075C24ADDB0C0010A817 /* SceneDelegate.swift in Sources */,
+				36E063AD2523E25200CCC13B /* PlaygroundVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RYRPKMVKDL;
+				DEVELOPMENT_TEAM = 3BJYKWHMM4;
 				INFOPLIST_FILE = SimpleRealtimeFilterPlayback/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -389,7 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RYRPKMVKDL;
+				DEVELOPMENT_TEAM = 3BJYKWHMM4;
 				INFOPLIST_FILE = SimpleRealtimeFilterPlayback/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
